@@ -17,6 +17,7 @@ zarr.config.set({
         "store_empty_chunks": False,
         "chunk_concurrent_minimum": 4,
         "chunk_concurrent_maximum": None,
+        "direct_io": True,
     }
 })
 

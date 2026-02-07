@@ -12,6 +12,7 @@ def main():
     implementation_to_args = {
         "zarrs_rust": [
             "zarrs_benchmark_read_sync",
+            "--direct-io",
             "--inner-chunks",
             "--concurrent-chunks",
         ],
@@ -36,12 +37,34 @@ def main():
             "--concurrent_chunks",
         ],
         # "zarr_dask_python": ["./src/zarr_benchmarks/zarr_dask_python_benchmark_read.py", "--concurrent_chunks"],
-        "zarrs_python": [
-            "./src/zarr_benchmarks/zarrs_python_benchmark_read.py",
+        "zarrs_python_codec_pipeline": [
+            "./src/zarr_benchmarks/zarrs_python_codec_pipeline_benchmark_read.py",
+            "--subchunks",
+            "--concurrent_chunks",
+        ],
+        "zarrs_python_array": [
+            "./src/zarr_benchmarks/zarrs_python_array_benchmark_read.py",
             "--subchunks",
             "--concurrent_chunks",
         ],
         # "zarrs_dask_python": ["./src/zarr_benchmarks/zarrs_dask_python_benchmark_read.py", "--concurrent_chunks"],
+        # "exzarr_elixir": [
+        #     "./exzarr_benchmark/exzarr_benchmark",
+        #     "--subchunks",
+        #     "--concurrent-chunks",
+        # ],
+        "zarr_java": [
+            "java", "-Xmx4g", "--enable-native-access=ALL-UNNAMED", "-jar",
+            "./zarr_java_benchmark/build/libs/zarr-java-benchmark-all.jar",
+            "--subchunks",
+            "--concurrent-chunks",
+        ],
+        "zarrita_js": [
+            "node", "--max-old-space-size=4096",
+            "./zarrita_js_benchmark/benchmark_read.mjs",
+            "--subchunks",
+            "--concurrent_chunks",
+        ],
     }
 
     implementations = [
@@ -50,9 +73,13 @@ def main():
         # "zarrs_rust_async",
         "tensorstore_python",
         "zarr_python",
-        "zarrs_python",
+        "zarrs_python_codec_pipeline",
+        "zarrs_python_array",
         # "zarr_dask_python",
         # "zarrs_dask_python",
+        # "exzarr_elixir",
+        "zarr_java",
+        "zarrita_js",
     ]
 
     images = [
@@ -91,16 +118,14 @@ def main():
                     # print(std_err)
 
                     wall_time = re.search(
-                        r"Elapsed \(wall clock\) time \(h:mm:ss or m:ss\): (\d+?):([\d\.]+?)\\n",
-                        str(std_err),
+                        r" in (\d+\.?\d*)ms",
+                        std_out.decode(),
                     )
                     memory_usage = re.search(
                         r"Maximum resident set size \(kbytes\): (\d+?)\\n", str(std_err)
                     )
                     if wall_time and memory_usage and pipes.returncode == 0:
-                        m = int(wall_time.group(1))
-                        s = float(wall_time.group(2))
-                        wall_time_s = m * 60 + s
+                        wall_time_s = float(wall_time.group(1)) / 1000.0
                         memory_usage_kb = int(memory_usage.group(1))
                         memory_usage_gb = float(memory_usage_kb) / 1.0e6
                         print(wall_time_s, memory_usage_gb)

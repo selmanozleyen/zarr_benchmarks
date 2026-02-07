@@ -1,0 +1,15 @@
+{
+  "name": "zarrita-js-benchmark",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "benchmark-read": "node --max-old-space-size=4096 benchmark_read.mjs",
+    "benchmark-roundtrip": "node --max-old-space-size=4096 benchmark_roundtrip.mjs"
+  },
+  "dependencies": {
+    "zarrita": "^0.6.1",
+    "@zarrita/storage": "^0.1.4",
+    "commander": "^12.0.0"
+  }
+}

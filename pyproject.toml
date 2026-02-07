@@ -13,15 +13,16 @@ authors = [
 ]
 dependencies = [
     "click==8.3.1",
-    "numpy==2.4.0",
-    "dask==2025.11.0", # FIXME: 2025.12.0 is slower, investigate
-    "xarray==2025.12.0",
+    "numpy==2.4.2",
+    "dask==2026.1.2",
+    "xarray==2026.1.0",
     # "xarray-tensorstore==0.1.5",
     "zarr==3.1.5",
-    "zarrs @ file:///home/ljd/dev/zarrs-python",
-    "pandas==2.3.3",
+    # "zarrs==0.2.2",
+    "zarrs @ git+https://github.com/zarrs/zarrs-python.git@ld/feat/array_impl",
+    "pandas==3.0.0",
     "tabulate==0.9.0",
-    "tensorstore==0.1.80",
+    "tensorstore==0.1.81",
     "matplotlib==3.10.8",
 ]
 

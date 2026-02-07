@@ -53,7 +53,7 @@ All datasets are $1024x1024x1024$ `uint16` arrays.
 
 This benchmark measures the minimum time and peak memory usage to "round trip" a dataset (potentially chunk-by-chunk).
  - The disk cache is cleared between each measurement
- - These are best of 5 measurements
+ - These are best of 10 measurements
 
 [Table of raw measurements (benchmarks_roundtrip.md)](./measurements/benchmark_roundtrip.md)
 
@@ -100,7 +100,7 @@ A subchunk is an inner chunk within a sharded chunk.
 ## Read All Benchmark
 This benchmark measures the minimum time and peak memory usage to read an entire dataset into memory.
  - The disk cache is cleared between each measurement
- - These are best of 5 measurements
+ - These are best of 10 measurements
 
 [Table of raw measurements (benchmarks_read_all.md)](./measurements/benchmark_read_all.md)
 

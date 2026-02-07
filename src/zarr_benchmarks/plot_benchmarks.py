@@ -7,6 +7,7 @@ from matplotlib.colors import LinearSegmentedColormap
 import numpy as np
 import subprocess
 import re
+import json
 from importlib.metadata import version
 
 import zarr
@@ -41,13 +42,31 @@ if m := re.search(r"\(zarrs (.+?)\)", zarrs_tools_ver):
 else:
     zarrs_ver = "0.18.0-beta.0"
 
+# Get zarr-java version from build.gradle.kts
+zarr_java_ver = "?"
+with open("zarr_java_benchmark/build.gradle.kts") as f:
+    if m := re.search(r'zarr-java:(\S+)"', f.read()):
+        zarr_java_ver = m.group(1)
+
+# Get zarrita.js version from package-lock.json
+zarrita_js_ver = "?"
+with open("zarrita_js_benchmark/package-lock.json") as f:
+    lock = json.load(f)
+    if v := lock.get("packages", {}).get("node_modules/zarrita", {}).get("version"):
+        zarrita_js_ver = v
+
 IMPLEMENTATIONS = {
     "zarrs_rust": f"zarrs/zarrs ({zarrs_ver})",
+    "zarrs_python_array": f"zarrs/zarrs-python ({zarrs.__version__}) ZarrsArray",
+    # "zarrs_python_codec_pipeline": f"zarr-developers/zarr-python ({zarr.__version__}) \n + zarrs/zarrs-python ({zarrs.__version__}) ZarrsCodecPipeline",
+    "zarrs_python_codec_pipeline": f"zarrs/zarrs-python ({zarrs.__version__}) ZarrsCodecPipeline",
     "tensorstore_python": f"google/tensorstore ({tensorstore.__version__})",
     "zarr_python": f"zarr-developers/zarr-python ({zarr.__version__})",
-    "zarrs_python": f"zarr-developers/zarr-python ({zarr.__version__}) \n + zarrs/zarrs-python ({zarrs.__version__}) ZarrsCodecPipeline",
     "zarr_dask_python": "Default BatchedCodecPipeline",
     "zarrs_dask_python": f"ZarrsCodecPipeline via zarrs/zarrs-python ({zarrs.__version__})",
+    # "exzarr_elixir": "thanos/ExZarr (Elixir)",
+    "zarr_java": f"zarr-developers/zarr-java ({zarr_java_ver})",
+    "zarrita_js": f"manzt/zarrita.js ({zarrita_js_ver})",
 }
 
 IMAGES = {
@@ -60,11 +79,15 @@ IMAGES = {
 _tab10 = plt.cm.tab10.colors
 COLORS = {
     "zarrs_rust": _tab10[0],
-    "tensorstore_python": _tab10[1],
+    "zarrs_python_codec_pipeline": _tab10[3],
+    "zarrs_python_array": _tab10[9],
     "zarr_python": _tab10[2],
-    "zarrs_python": _tab10[3],
+    "tensorstore_python": _tab10[1],
     "zarr_dask_python": _tab10[4],
     "zarrs_dask_python": _tab10[5],
+    "zarr_java": _tab10[6],
+    "zarrita_js": _tab10[7],
+    # "exzarr_elixir": _tab10[8],
 }
 
 plt.rcParams.update({
@@ -159,6 +182,10 @@ def plot_read_all(plot_dask: bool, ymax: float):
     else:
         df = df.loc[:, ~df.columns.get_level_values(1).str.contains("dask")]
 
+    # Reorder columns to match IMPLEMENTATIONS order
+    impl_order = [k for k in IMPLEMENTATIONS if k in df.columns.get_level_values(1)]
+    df = df.reindex(columns=impl_order, level=1)
+
     # Get colors for the implementations in this plot
     impl_keys = df.columns.get_level_values(1).unique()
     colors = [COLORS[k] for k in impl_keys]
@@ -214,6 +241,10 @@ def plot_read_chunks(plot_dask: bool):
     else:
         df = df.loc[:, ~df.columns.get_level_values(1).str.contains("dask")]
 
+    # Reorder columns to match IMPLEMENTATIONS order
+    impl_order = [k for k in IMPLEMENTATIONS if k in df.columns.get_level_values(1)]
+    df = df.reindex(columns=impl_order, level=1)
+
     # Reduce the dictionary to contain only the specified keys
     def reduce_dict(d, keys):
         return {k: d[k] for k in keys if k in d}
@@ -223,60 +254,69 @@ def plot_read_chunks(plot_dask: bool):
     df = df.reset_index(level=1)
     print(df)
 
-    fig = plt.figure(figsize=(9, 4), layout="constrained")
-    spec = fig.add_gridspec(2, 2)
-    ax_time = fig.add_subplot(spec[:, 0])
-    ax_mem = fig.add_subplot(spec[:, 1])
+    images = list(IMAGES.keys())
+    image_titles = {k: v.replace("\n", " ") for k, v in IMAGES.items()}
+    n_rows = len(images)
+
+    fig, axes = plt.subplots(n_rows, 2, figsize=(9, 3 * n_rows), layout="constrained")
 
     colors = [COLORS[k] for k in implementations.keys()]
-    for image, row in df.groupby("Image"):
-        row.plot(x="Concurrency", y="Time (s)", ax=ax_time, color=colors, ls=IMAGE_LS[image])
-        row.plot(x="Concurrency", y="Memory (GB)", ax=ax_mem, color=colors, ls=IMAGE_LS[image])
+    xticks = [1, 2, 4, 8]
 
-    # Custom legend
+    for i, image in enumerate(images):
+        ax_time = axes[i, 0]
+        ax_mem = axes[i, 1]
+
+        row = df.loc[image]
+        row.plot(x="Concurrency", y="Time (s)", ax=ax_time, color=colors)
+        row.plot(x="Concurrency", y="Memory (GB)", ax=ax_mem, color=colors)
+
+        ax_time.get_legend().remove()
+        ax_mem.get_legend().remove()
+
+        # Row title
+        ax_time.set_title(image_titles[image], fontweight='bold', loc='left')
+
+        # Time axis styling
+        ax_time.set_yscale('log')
+        ax_time.yaxis.set_major_formatter(plt.FuncFormatter("{:.2f}".format))
+        ax_time.yaxis.set_minor_formatter(plt.FuncFormatter("{:.2f}".format))
+        ax_time.set_xscale('log', base=2)
+        ax_time.xaxis.set_major_formatter(plt.FuncFormatter("{:.0f}".format))
+        ax_time.set_xlim(1, 8)
+        ax_time.set_xticks(xticks)
+        ax_time.grid(True, which='both', axis='y')
+        ax_time.spines['top'].set_visible(False)
+        ax_time.spines['right'].set_visible(False)
+
+        # Memory axis styling
+        ax_mem.set_yscale('log')
+        ax_mem.yaxis.set_major_formatter(plt.FuncFormatter("{:.2f}".format))
+        ax_mem.yaxis.set_minor_formatter(plt.FuncFormatter("{:.2f}".format))
+        ax_mem.set_xscale('log', base=2)
+        ax_mem.xaxis.set_major_formatter(plt.FuncFormatter("{:.0f}".format))
+        ax_mem.set_xlim(1, 8)
+        ax_mem.set_xticks(xticks)
+        ax_mem.grid(True, which='both', axis='y')
+        ax_mem.spines['top'].set_visible(False)
+        ax_mem.spines['right'].set_visible(False)
+
+        # Only label x-axis on the bottom row
+        if i == n_rows - 1:
+            ax_time.set_xlabel("Concurrent chunks")
+            ax_mem.set_xlabel("Concurrent chunks")
+        else:
+            ax_time.set_xlabel("")
+            ax_mem.set_xlabel("")
+
+        # Only label y-axis on the left/right edges
+        ax_time.set_ylabel("Elapsed time (s)")
+        ax_mem.set_ylabel("Peak memory usage (GB)")
+
+    # Single legend at the top
     custom_lines = [Line2D([0], [0], color=c) for c in colors]
     title = f"dask/dask ({dask.__version__}) + zarr-developers/zarr-python ({zarr.__version__})" if plot_dask else "Zarr V3 Implementation"
-    fig.legend(custom_lines, [implementation for implementation in implementations.values()], loc="outside upper left", ncol=2, title=title, borderaxespad=0)
-    custom_lines = [Line2D([0], [0], color='k', ls=':'),
-                Line2D([0], [0], color='k', ls='--'),
-                Line2D([0], [0], color='k', ls='-')]
-    fig.legend(custom_lines, IMAGES.values(), loc="outside upper right", ncol=2, title="Dataset", borderaxespad=0)
-
-    ax_time.get_legend().remove()
-    ax_mem.get_legend().remove()
-
-    ax_time.set_ylabel("Elapsed time (s)")
-
-    xticks = [1, 2, 4, 8]
-    # ax_time.set_ylim(ymin=0, ymax=YMAX_READ_CHUNKS)
-    ax_time.set_yscale('log')
-    ax_time.yaxis.set_major_formatter(plt.FuncFormatter("{:.2f}".format))
-    ax_time.yaxis.set_minor_formatter(plt.FuncFormatter("{:.2f}".format))
-    # ax_time.set_ylim(ymin=0, ymax=YMAX_READ_CHUNKS)
-    ax_time.set_xscale('log', base=2)
-    ax_time.xaxis.set_major_formatter(plt.FuncFormatter("{:.0f}".format))
-    ax_time.set_xlim(1, 8)
-    ax_time.set_xticks(xticks)
-    ax_time.set_xlabel("Concurrent chunks")
-    ax_time.grid(True, which='both', axis='y')
-    ax_time.spines['top'].set_visible(False)
-    ax_time.spines['right'].set_visible(False)
-
-    ax_mem.set_yscale('log')
-    ax_mem.yaxis.set_major_formatter(plt.FuncFormatter("{:.2f}".format))
-    ax_mem.yaxis.set_minor_formatter(plt.FuncFormatter("{:.2f}".format))
-    ax_mem.set_xscale('log', base=2)
-    ax_mem.xaxis.set_major_formatter(plt.FuncFormatter("{:.0f}".format))
-    ax_mem.set_xlim(1, 8)
-    ax_mem.set_xticks(xticks)
-    ax_mem.set_xlabel("Concurrent chunks")
-    ax_mem.set_ylabel("Peak memory usage (GB)")
-    ax_mem.grid(True, which='both', axis='y')
-    ax_mem.spines['top'].set_visible(False)
-    ax_mem.spines['right'].set_visible(False)
-
-    custom_bar_label(ax_time)
-    custom_bar_label(ax_mem)
+    fig.legend(custom_lines, list(implementations.values()), loc="outside upper center", ncol=LEGEND_COLS, title=title, borderaxespad=0)
 
     fig.savefig(f"plots/benchmark_read_chunks{'_dask' if plot_dask else ''}.svg", metadata={'Date': None, 'Creator': None})
     # fig.savefig(f"plots/benchmark_read_chunks{'_dask' if plot_dask else ''}.pdf", metadata={'Date': None, 'Creator': None})
@@ -289,6 +329,10 @@ def plot_read_subchunks(plot_dask: bool):
         df = df.loc[:, df.columns.get_level_values(1).str.contains("dask")]
     else:
         df = df.loc[:, ~df.columns.get_level_values(1).str.contains("dask")]
+
+    # Reorder columns to match IMPLEMENTATIONS order
+    impl_order = [k for k in IMPLEMENTATIONS if k in df.columns.get_level_values(1)]
+    df = df.reindex(columns=impl_order, level=1)
 
     # Reduce the dictionary to contain only the specified keys
     def reduce_dict(d, keys):
@@ -363,6 +407,10 @@ def plot_roundtrip(plot_dask: bool, ymax: float):
         df = df.loc[:, df.columns.get_level_values(1).str.contains("dask")]
     else:
         df = df.loc[:, ~df.columns.get_level_values(1).str.contains("dask")]
+
+    # Reorder columns to match IMPLEMENTATIONS order
+    impl_order = [k for k in IMPLEMENTATIONS if k in df.columns.get_level_values(1)]
+    df = df.reindex(columns=impl_order, level=1)
 
     # Get colors for the implementations in this plot
     impl_keys = df.columns.get_level_values(1).unique()

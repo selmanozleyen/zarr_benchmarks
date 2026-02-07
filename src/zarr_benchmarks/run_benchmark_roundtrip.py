@@ -11,7 +11,7 @@ import tempfile
 
 def main():
     implementation_to_args = {
-        "zarrs_rust": ["zarrs_reencode"],
+        "zarrs_rust": ["zarrs_reencode", "--direct-io"],
         # "zarrs_rust_async_as_sync": ["zarrs_benchmark_read_async_as_sync", "--read-all"],
         # "zarrs_rust_async": ["zarrs_benchmark_read_async", "--read-all"],
         "tensorstore_python": [
@@ -21,9 +21,18 @@ def main():
         "zarr_dask_python": [
             "./src/zarr_benchmarks/zarr_dask_python_benchmark_roundtrip.py"
         ],
-        "zarrs_python": ["./src/zarr_benchmarks/zarrs_python_benchmark_roundtrip.py"],
+        "zarrs_python_codec_pipeline": ["./src/zarr_benchmarks/zarrs_python_codec_pipeline_benchmark_roundtrip.py"],
+        "zarrs_python_array": ["./src/zarr_benchmarks/zarrs_python_array_benchmark_roundtrip.py"],
         "zarrs_dask_python": [
             "./src/zarr_benchmarks/zarrs_dask_python_benchmark_roundtrip.py"
+        ],
+        "zarr_java": [
+            "java", "-Xmx4g", "--enable-native-access=ALL-UNNAMED", "-jar",
+            "./zarr_java_benchmark/build/libs/zarr-java-benchmark-roundtrip-all.jar",
+        ],
+        "zarrita_js": [
+            "node", "--max-old-space-size=4096",
+            "./zarrita_js_benchmark/benchmark_roundtrip.mjs",
         ],
     }
 
@@ -33,9 +42,12 @@ def main():
         # "zarrs_rust_async",
         "tensorstore_python",
         "zarr_python",
-        "zarrs_python",
+        "zarrs_python_codec_pipeline",
+        "zarrs_python_array",
         "zarr_dask_python",
         "zarrs_dask_python",
+        "zarr_java",
+        "zarrita_js",
     ]
 
     images = [
@@ -44,7 +56,7 @@ def main():
         "data/benchmark_compress_shard.zarr",
     ]
 
-    best_of = 5
+    best_of = 10
 
     index = []
     rows = []
@@ -57,39 +69,39 @@ def main():
             memory_usage_measurements = []
             for i in range(best_of):
                 print(implementation, image, i)
-                output = tempfile.TemporaryDirectory()
-                args = (
-                    time_args()
-                    + implementation_to_args[implementation]
-                    + [image]
-                    + [output.name]
-                )
-                clear_cache()
-                pipes = subprocess.Popen(
-                    args, stdout=subprocess.PIPE, stderr=subprocess.PIPE
-                )
-                std_out, std_err = pipes.communicate()
-                # print(std_err)
+                with tempfile.TemporaryDirectory() as output_dir:
+                    args = (
+                        time_args()
+                        + implementation_to_args[implementation]
+                        + [image]
+                        + [output_dir]
+                    )
+                    clear_cache()
+                    pipes = subprocess.Popen(
+                        args, stdout=subprocess.PIPE, stderr=subprocess.PIPE
+                    )
+                    std_out, std_err = pipes.communicate()
+                    # print(std_err)
 
-                wall_time = re.search(
-                    r"Elapsed \(wall clock\) time \(h:mm:ss or m:ss\): (\d+?):([\d\.]+?)\\n",
-                    str(std_err),
-                )
-                memory_usage = re.search(
-                    r"Maximum resident set size \(kbytes\): (\d+?)\\n", str(std_err)
-                )
-                if wall_time and memory_usage and pipes.returncode == 0:
-                    m = int(wall_time.group(1))
-                    s = float(wall_time.group(2))
-                    wall_time_s = m * 60 + s
-                    memory_usage_kb = int(memory_usage.group(1))
-                    memory_usage_gb = float(memory_usage_kb) / 1.0e6
-                    print(wall_time_s, memory_usage_gb)
-                    wall_time_measurements.append(wall_time_s)
-                    memory_usage_measurements.append(memory_usage_gb)
-                else:
-                    wall_time_measurements.append(math.nan)
-                    memory_usage_measurements.append(math.nan)
+                    wall_time = re.search(
+                        r"(?:in |total: )(\d+\.?\d*)ms",
+                        std_out.decode(),
+                    )
+                    memory_usage = re.search(
+                        r"Maximum resident set size \(kbytes\): (\d+?)\\n", str(std_err)
+                    )
+                    if wall_time and memory_usage and pipes.returncode == 0:
+                        wall_time_s = float(wall_time.group(1)) / 1000.0
+                        memory_usage_kb = int(memory_usage.group(1))
+                        memory_usage_gb = float(memory_usage_kb) / 1.0e6
+                        print(wall_time_s, memory_usage_gb)
+                        wall_time_measurements.append(wall_time_s)
+                        memory_usage_measurements.append(memory_usage_gb)
+                    else:
+                        print(std_out)
+                        print(std_err)
+                        wall_time_measurements.append(math.nan)
+                        memory_usage_measurements.append(math.nan)
 
             wall_time_best = np.nanmin(wall_time_measurements)
             memory_usages_best = np.nanmin(memory_usage_measurements)

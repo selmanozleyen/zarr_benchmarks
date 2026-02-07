@@ -1,8 +1,24 @@
-setup:
-	cargo binstall -y zarrs_tools@0.7.5
-
 binstall:
 	curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
+
+# Install zarrs_tools
+build_zarrs:
+	cargo binstall -y zarrs_tools@0.8.1
+
+# Build ExZarr Elixir benchmark (requires Elixir + Mix)
+build_exzarr:
+	cd exzarr_benchmark && mix deps.get && mix escript.build
+
+# Build zarr-java benchmarks (requires Java 21+ and Gradle)
+build_zarr_java:
+	cd zarr_java_benchmark && ./gradlew shadowJar shadowJarRoundtrip
+
+# Install zarrita.js dependencies (requires Node.js)
+build_zarrita_js:
+	cd zarrita_js_benchmark && npm install
+
+# Build all new implementations
+build_all: build_zarrs build_exzarr build_zarr_java build_zarrita_js
 
 generate_data:
 	./generate_benchmark_array.rs data/benchmark.zarr
