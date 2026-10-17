@@ -27,7 +27,11 @@ zarr.config.set({
     }
 })
 # Two-stage builds size their read and decode pools from these; other builds ignore them.
-for key, var in (("read_workers", "ZARRS_READ_WORKERS"), ("decode_workers", "ZARRS_DECODE_WORKERS")):
+for key, var in (
+    ("read_workers", "ZARRS_READ_WORKERS"),
+    ("decode_workers", "ZARRS_DECODE_WORKERS"),
+    ("read_ahead_bytes", "ZARRS_READ_AHEAD_BYTES"),
+):
     if os.environ.get(var):
         zarr.config.set({f"codec_pipeline.{key}": int(os.environ[var])})
 

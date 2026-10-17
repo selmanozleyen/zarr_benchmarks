@@ -6,8 +6,9 @@ Each arm is a Python interpreter with one zarrs-python build installed:
     ARMS="main=/venvs/main/bin/python two-stage=/venvs/two-stage/bin/python:16:16" \
         uv run run_benchmark_arms
 
-An optional `:READ:DECODE` suffix sets `codec_pipeline.read_workers` and
-`codec_pipeline.decode_workers` for that arm; a build without those settings ignores them.
+An optional `:READ:DECODE[:READ_AHEAD_BYTES]` suffix sets `codec_pipeline.read_workers`,
+`codec_pipeline.decode_workers` and `codec_pipeline.read_ahead_bytes` for that arm (empty fields
+keep the default); a build without those settings ignores them.
 Repetitions are interleaved across arms (arm order shuffled per repetition) so a drifting
 machine hits every arm alike. Best of BEST_OF, as in the other benchmarks.
 """
@@ -38,10 +39,9 @@ def parse_arms(spec: str) -> list[tuple[str, str, dict[str, str]]]:
     arms = []
     for entry in spec.split():
         name, rest = entry.split("=", 1)
-        python, *workers = rest.split(":")
-        env = {}
-        if workers:
-            env = {"ZARRS_READ_WORKERS": workers[0], "ZARRS_DECODE_WORKERS": workers[1]}
+        python, *fields = rest.split(":")
+        names = ("ZARRS_READ_WORKERS", "ZARRS_DECODE_WORKERS", "ZARRS_READ_AHEAD_BYTES")
+        env = {name: value for name, value in zip(names, fields) if value}
         arms.append((name, python, env))
     return arms
 
