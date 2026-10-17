@@ -1,0 +1,508 @@
+read_all       data/benchmark.zarr                  main024      rep 0  {'wall': 1.46, 'decoded': 0.9108200000000001, 'rss': 2.415728, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark.zarr                  box          rep 0  {'wall': 1.46, 'decoded': 0.8889600000000001, 'rss': 2.417584, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark.zarr                  main024      rep 1  {'wall': 1.27, 'decoded': 0.7068, 'rss': 2.415744, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark.zarr                  box          rep 1  {'wall': 1.5, 'decoded': 0.8861, 'rss': 2.417536, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark.zarr                  main024      rep 2  {'wall': 1.48, 'decoded': 0.9142, 'rss': 2.415728, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark.zarr                  box          rep 2  {'wall': 1.45, 'decoded': 0.86734, 'rss': 2.417536, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark.zarr                  main024      rep 3  {'wall': 1.35, 'decoded': 0.70785, 'rss': 2.41576, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark.zarr                  box          rep 3  {'wall': 1.3, 'decoded': 0.75149, 'rss': 2.41752, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark.zarr                  main024      rep 4  {'wall': 1.35, 'decoded': 0.91735, 'rss': 2.415696, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark.zarr                  box          rep 4  {'wall': 1.31, 'decoded': 0.71796, 'rss': 2.417648, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark.zarr                  main024      rep 5  {'wall': 1.3, 'decoded': 0.7252000000000001, 'rss': 2.415776, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark.zarr                  box          rep 5  {'wall': 1.31, 'decoded': 0.72504, 'rss': 2.417504, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark.zarr                  box          rep 6  {'wall': 1.34, 'decoded': 0.72096, 'rss': 2.417568, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark.zarr                  main024      rep 6  {'wall': 1.34, 'decoded': 0.71014, 'rss': 2.41584, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark.zarr                  box          rep 7  {'wall': 1.32, 'decoded': 0.88566, 'rss': 2.4176, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark.zarr                  main024      rep 7  {'wall': 1.3, 'decoded': 0.71094, 'rss': 2.415728, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark.zarr                  main024      rep 8  {'wall': 1.36, 'decoded': 0.71494, 'rss': 2.415632, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark.zarr                  box          rep 8  {'wall': 1.29, 'decoded': 0.7178300000000001, 'rss': 2.417472, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark.zarr                  box          rep 9  {'wall': 1.36, 'decoded': 0.71999, 'rss': 2.41752, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark.zarr                  main024      rep 9  {'wall': 1.55, 'decoded': 0.91755, 'rss': 2.415808, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+    case          image  main024 median (s)  main024 p20 (s)  main024 p80 (s)  main024 decoded (s)  main024 wall (s)  main024 memory (GB)                       main024 pools  box median (s)  box p20 (s)  box p80 (s)  box decoded (s)  box wall (s)  box memory (GB)                       box pools  box time / main024 time  main024 / box median speedup
+read_all benchmark.zarr             0.72007         0.709682          0.91483               0.7068              1.27             2.415632 single pool zarrs 0.2.3 fallbacks 0        0.738265     0.719584     0.885748          0.71783          1.29         2.417472 (64, 8) zarrs 0.2.3 fallbacks 0                 1.015606                      0.975354
+read_all       data/benchmark_compress.zarr         main024      rep 0  {'wall': 0.83, 'decoded': 0.21239, 'rss': 2.436256, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress.zarr         box          rep 0  {'wall': 0.77, 'decoded': 0.21588, 'rss': 2.442944, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress.zarr         box          rep 1  {'wall': 0.84, 'decoded': 0.22275999999999999, 'rss': 2.442384, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress.zarr         main024      rep 1  {'wall': 0.89, 'decoded': 0.21141, 'rss': 2.43656, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress.zarr         main024      rep 2  {'wall': 0.86, 'decoded': 0.21872999999999998, 'rss': 2.43104, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress.zarr         box          rep 2  {'wall': 0.85, 'decoded': 0.21281999999999998, 'rss': 2.442496, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress.zarr         box          rep 3  {'wall': 0.85, 'decoded': 0.21749000000000002, 'rss': 2.439136, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress.zarr         main024      rep 3  {'wall': 0.94, 'decoded': 0.22097999999999998, 'rss': 2.432816, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress.zarr         box          rep 4  {'wall': 0.99, 'decoded': 0.22006, 'rss': 2.441312, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress.zarr         main024      rep 4  {'wall': 0.85, 'decoded': 0.23418, 'rss': 2.433472, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress.zarr         main024      rep 5  {'wall': 0.83, 'decoded': 0.21169, 'rss': 2.431472, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress.zarr         box          rep 5  {'wall': 0.87, 'decoded': 0.2074, 'rss': 2.44592, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress.zarr         box          rep 6  {'wall': 0.82, 'decoded': 0.20663, 'rss': 2.437632, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress.zarr         main024      rep 6  {'wall': 0.83, 'decoded': 0.21619, 'rss': 2.432704, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress.zarr         box          rep 7  {'wall': 0.87, 'decoded': 0.20790999999999998, 'rss': 2.442704, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress.zarr         main024      rep 7  {'wall': 0.9, 'decoded': 0.2155, 'rss': 2.43488, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress.zarr         main024      rep 8  {'wall': 0.7, 'decoded': 0.21588, 'rss': 2.435504, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress.zarr         box          rep 8  {'wall': 0.82, 'decoded': 0.21194, 'rss': 2.446464, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress.zarr         box          rep 9  {'wall': 0.89, 'decoded': 0.21638, 'rss': 2.438528, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress.zarr         main024      rep 9  {'wall': 0.86, 'decoded': 0.23059000000000002, 'rss': 2.430512, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+    case                   image  main024 median (s)  main024 p20 (s)  main024 p80 (s)  main024 decoded (s)  main024 wall (s)  main024 memory (GB)                       main024 pools  box median (s)  box p20 (s)  box p80 (s)  box decoded (s)  box wall (s)  box memory (GB)                       box pools  box time / main024 time  main024 / box median speedup
+read_all benchmark_compress.zarr            0.216035          0.21225         0.222902              0.21141               0.7             2.430512 single pool zarrs 0.2.3 fallbacks 0         0.21435     0.207808     0.218004          0.20663          0.77         2.437632 (64, 8) zarrs 0.2.3 fallbacks 0                  0.97739                      1.007861
+read_all       data/benchmark_compress_shard.zarr   main024      rep 0  {'wall': 1.0, 'decoded': 0.39553, 'rss': 2.275264, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress_shard.zarr   box          rep 0  {'wall': 1.01, 'decoded': 0.39474000000000004, 'rss': 2.436848, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress_shard.zarr   main024      rep 1  {'wall': 0.98, 'decoded': 0.3953, 'rss': 2.275232, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress_shard.zarr   box          rep 1  {'wall': 1.02, 'decoded': 0.41069, 'rss': 2.44816, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress_shard.zarr   main024      rep 2  {'wall': 1.02, 'decoded': 0.3932, 'rss': 2.275344, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress_shard.zarr   box          rep 2  {'wall': 1.11, 'decoded': 0.41098, 'rss': 2.425248, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress_shard.zarr   main024      rep 3  {'wall': 1.0, 'decoded': 0.39444, 'rss': 2.2768, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress_shard.zarr   box          rep 3  {'wall': 0.96, 'decoded': 0.40491000000000005, 'rss': 2.39992, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress_shard.zarr   main024      rep 4  {'wall': 0.95, 'decoded': 0.38813, 'rss': 2.275264, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress_shard.zarr   box          rep 4  {'wall': 1.02, 'decoded': 0.41151, 'rss': 2.417504, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress_shard.zarr   main024      rep 5  {'wall': 1.06, 'decoded': 0.40411, 'rss': 2.27512, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress_shard.zarr   box          rep 5  {'wall': 1.07, 'decoded': 0.40986, 'rss': 2.413376, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress_shard.zarr   box          rep 6  {'wall': 1.02, 'decoded': 0.41269, 'rss': 2.424944, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress_shard.zarr   main024      rep 6  {'wall': 1.07, 'decoded': 0.41126999999999997, 'rss': 2.27536, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress_shard.zarr   main024      rep 7  {'wall': 0.96, 'decoded': 0.38899, 'rss': 2.275392, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress_shard.zarr   box          rep 7  {'wall': 1.07, 'decoded': 0.46723000000000003, 'rss': 2.260128, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress_shard.zarr   main024      rep 8  {'wall': 1.05, 'decoded': 0.39952, 'rss': 2.275312, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress_shard.zarr   box          rep 8  {'wall': 1.02, 'decoded': 0.41714, 'rss': 2.423248, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress_shard.zarr   box          rep 9  {'wall': 1.04, 'decoded': 0.39123, 'rss': 2.418048, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+read_all       data/benchmark_compress_shard.zarr   main024      rep 9  {'wall': 0.99, 'decoded': 0.38641000000000003, 'rss': 2.275456, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+    case                         image  main024 median (s)  main024 p20 (s)  main024 p80 (s)  main024 decoded (s)  main024 wall (s)  main024 memory (GB)                       main024 pools  box median (s)  box p20 (s)  box p80 (s)  box decoded (s)  box wall (s)  box memory (GB)                       box pools  box time / main024 time  main024 / box median speedup
+read_all benchmark_compress_shard.zarr             0.39487         0.388818         0.400438              0.38641              0.95              2.27512 single pool zarrs 0.2.3 fallbacks 0        0.410835     0.402876      0.41358          0.39123          0.96         2.260128 (64, 8) zarrs 0.2.3 fallbacks 0                 1.012474                       0.96114
+chunks c=1     data/benchmark.zarr                  main024      rep 0  {'wall': 1.45, 'decoded': 0.8484400000000001, 'rss': 0.121712, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark.zarr                  box          rep 0  {'wall': 1.48, 'decoded': 0.84394, 'rss': 0.123664, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark.zarr                  main024      rep 1  {'wall': 1.34, 'decoded': 0.7758999999999999, 'rss': 0.121728, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark.zarr                  box          rep 1  {'wall': 1.44, 'decoded': 0.81679, 'rss': 0.123616, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark.zarr                  box          rep 2  {'wall': 1.43, 'decoded': 0.7765700000000001, 'rss': 0.123744, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark.zarr                  main024      rep 2  {'wall': 1.38, 'decoded': 0.80368, 'rss': 0.121712, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark.zarr                  main024      rep 3  {'wall': 1.37, 'decoded': 0.78876, 'rss': 0.121728, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark.zarr                  box          rep 3  {'wall': 1.44, 'decoded': 0.79555, 'rss': 0.123632, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark.zarr                  main024      rep 4  {'wall': 1.36, 'decoded': 0.78313, 'rss': 0.121872, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark.zarr                  box          rep 4  {'wall': 1.42, 'decoded': 0.7960900000000001, 'rss': 0.123616, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark.zarr                  main024      rep 5  {'wall': 1.49, 'decoded': 0.87158, 'rss': 0.121728, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark.zarr                  box          rep 5  {'wall': 1.48, 'decoded': 0.83299, 'rss': 0.123552, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark.zarr                  box          rep 6  {'wall': 1.41, 'decoded': 0.81644, 'rss': 0.123648, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark.zarr                  main024      rep 6  {'wall': 1.43, 'decoded': 0.78706, 'rss': 0.12176, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark.zarr                  box          rep 7  {'wall': 1.38, 'decoded': 0.81452, 'rss': 0.123552, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark.zarr                  main024      rep 7  {'wall': 1.36, 'decoded': 0.79369, 'rss': 0.121776, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark.zarr                  box          rep 8  {'wall': 1.42, 'decoded': 0.8317100000000001, 'rss': 0.123664, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark.zarr                  main024      rep 8  {'wall': 1.4, 'decoded': 0.8096599999999999, 'rss': 0.12176, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark.zarr                  main024      rep 9  {'wall': 1.96, 'decoded': 1.35172, 'rss': 0.121728, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark.zarr                  box          rep 9  {'wall': 1.38, 'decoded': 0.77404, 'rss': 0.123488, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+      case          image  main024 median (s)  main024 p20 (s)  main024 p80 (s)  main024 decoded (s)  main024 wall (s)  main024 memory (GB)                       main024 pools  box median (s)  box p20 (s)  box p80 (s)  box decoded (s)  box wall (s)  box memory (GB)                       box pools  box time / main024 time  main024 / box median speedup
+chunks c=1 benchmark.zarr            0.798685         0.786274         0.853068               0.7759              1.34             0.121712 single pool zarrs 0.2.3 fallbacks 0         0.81548     0.791754     0.831966          0.77404          1.38         0.123488 (64, 8) zarrs 0.2.3 fallbacks 0                 0.997603                      0.979405
+chunks c=2     data/benchmark.zarr                  main024      rep 0  {'wall': 1.28, 'decoded': 0.6705399999999999, 'rss': 0.187552, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark.zarr                  box          rep 0  {'wall': 1.26, 'decoded': 0.68091, 'rss': 0.189376, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark.zarr                  main024      rep 1  {'wall': 1.39, 'decoded': 0.7410399999999999, 'rss': 0.187504, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark.zarr                  box          rep 1  {'wall': 1.33, 'decoded': 0.7014199999999999, 'rss': 0.18928, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark.zarr                  main024      rep 2  {'wall': 1.34, 'decoded': 0.75098, 'rss': 0.187488, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark.zarr                  box          rep 2  {'wall': 1.28, 'decoded': 0.68457, 'rss': 0.18936, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark.zarr                  main024      rep 3  {'wall': 1.24, 'decoded': 0.67626, 'rss': 0.187552, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark.zarr                  box          rep 3  {'wall': 1.24, 'decoded': 0.67598, 'rss': 0.189376, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark.zarr                  main024      rep 4  {'wall': 1.24, 'decoded': 0.67976, 'rss': 0.187472, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark.zarr                  box          rep 4  {'wall': 1.29, 'decoded': 0.6733300000000001, 'rss': 0.189312, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark.zarr                  main024      rep 5  {'wall': 1.26, 'decoded': 0.68988, 'rss': 0.187392, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark.zarr                  box          rep 5  {'wall': 1.29, 'decoded': 0.684, 'rss': 0.189328, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark.zarr                  box          rep 6  {'wall': 1.25, 'decoded': 0.6888, 'rss': 0.189328, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark.zarr                  main024      rep 6  {'wall': 1.16, 'decoded': 0.68665, 'rss': 0.187488, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark.zarr                  main024      rep 7  {'wall': 1.28, 'decoded': 0.67733, 'rss': 0.187504, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark.zarr                  box          rep 7  {'wall': 1.43, 'decoded': 0.78415, 'rss': 0.189296, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark.zarr                  box          rep 8  {'wall': 1.34, 'decoded': 0.72302, 'rss': 0.189312, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark.zarr                  main024      rep 8  {'wall': 1.41, 'decoded': 0.73681, 'rss': 0.187488, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark.zarr                  box          rep 9  {'wall': 1.24, 'decoded': 0.68391, 'rss': 0.189312, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark.zarr                  main024      rep 9  {'wall': 1.31, 'decoded': 0.71823, 'rss': 0.187456, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+      case          image  main024 median (s)  main024 p20 (s)  main024 p80 (s)  main024 decoded (s)  main024 wall (s)  main024 memory (GB)                       main024 pools  box median (s)  box p20 (s)  box p80 (s)  box decoded (s)  box wall (s)  box memory (GB)                       box pools  box time / main024 time  main024 / box median speedup
+chunks c=2 benchmark.zarr            0.688265         0.677116         0.737656              0.67054              1.16             0.187392 single pool zarrs 0.2.3 fallbacks 0        0.684285     0.679924      0.70574          0.67333          1.24          0.18928 (64, 8) zarrs 0.2.3 fallbacks 0                 1.004161                      1.005816
+chunks c=4     data/benchmark.zarr                  box          rep 0  {'wall': 1.27, 'decoded': 0.71027, 'rss': 0.320528, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark.zarr                  main024      rep 0  {'wall': 1.22, 'decoded': 0.6925, 'rss': 0.318672, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark.zarr                  main024      rep 1  {'wall': 1.33, 'decoded': 0.70455, 'rss': 0.318704, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark.zarr                  box          rep 1  {'wall': 1.33, 'decoded': 0.69816, 'rss': 0.320528, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark.zarr                  box          rep 2  {'wall': 1.33, 'decoded': 0.71542, 'rss': 0.320544, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark.zarr                  main024      rep 2  {'wall': 1.42, 'decoded': 0.7966799999999999, 'rss': 0.318816, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark.zarr                  box          rep 3  {'wall': 1.32, 'decoded': 0.72064, 'rss': 0.320576, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark.zarr                  main024      rep 3  {'wall': 1.33, 'decoded': 0.7331, 'rss': 0.318736, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark.zarr                  main024      rep 4  {'wall': 1.29, 'decoded': 0.72341, 'rss': 0.318736, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark.zarr                  box          rep 4  {'wall': 1.45, 'decoded': 0.72421, 'rss': 0.320544, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark.zarr                  box          rep 5  {'wall': 1.3, 'decoded': 0.7320399999999999, 'rss': 0.320592, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark.zarr                  main024      rep 5  {'wall': 1.34, 'decoded': 0.72554, 'rss': 0.318752, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark.zarr                  main024      rep 6  {'wall': 1.35, 'decoded': 0.7313200000000001, 'rss': 0.318768, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark.zarr                  box          rep 6  {'wall': 1.81, 'decoded': 1.01013, 'rss': 0.320624, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark.zarr                  box          rep 7  {'wall': 1.31, 'decoded': 0.74828, 'rss': 0.320624, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark.zarr                  main024      rep 7  {'wall': 1.29, 'decoded': 0.71774, 'rss': 0.318768, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark.zarr                  main024      rep 8  {'wall': 1.38, 'decoded': 0.7339199999999999, 'rss': 0.31872, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark.zarr                  box          rep 8  {'wall': 1.31, 'decoded': 0.72354, 'rss': 0.32056, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark.zarr                  main024      rep 9  {'wall': 1.4, 'decoded': 0.75289, 'rss': 0.318816, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark.zarr                  box          rep 9  {'wall': 1.43, 'decoded': 0.85985, 'rss': 0.320512, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+      case          image  main024 median (s)  main024 p20 (s)  main024 p80 (s)  main024 decoded (s)  main024 wall (s)  main024 memory (GB)                       main024 pools  box median (s)  box p20 (s)  box p80 (s)  box decoded (s)  box wall (s)  box memory (GB)                       box pools  box time / main024 time  main024 / box median speedup
+chunks c=4 benchmark.zarr             0.72843         0.715102         0.737714               0.6925              1.22             0.318672 single pool zarrs 0.2.3 fallbacks 0        0.723875      0.71439     0.770594          0.69816          1.27         0.320512 (64, 8) zarrs 0.2.3 fallbacks 0                 1.008173                      1.006293
+chunks c=8     data/benchmark.zarr                  main024      rep 0  {'wall': 1.32, 'decoded': 0.73084, 'rss': 0.581184, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark.zarr                  box          rep 0  {'wall': 1.34, 'decoded': 0.73945, 'rss': 0.583136, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark.zarr                  box          rep 1  {'wall': 1.45, 'decoded': 0.85174, 'rss': 0.583024, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark.zarr                  main024      rep 1  {'wall': 1.36, 'decoded': 0.70236, 'rss': 0.581248, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark.zarr                  box          rep 2  {'wall': 1.32, 'decoded': 0.69612, 'rss': 0.583056, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark.zarr                  main024      rep 2  {'wall': 1.48, 'decoded': 0.826, 'rss': 0.581184, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark.zarr                  box          rep 3  {'wall': 1.28, 'decoded': 0.7239099999999999, 'rss': 0.583024, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark.zarr                  main024      rep 3  {'wall': 1.24, 'decoded': 0.69924, 'rss': 0.581248, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark.zarr                  box          rep 4  {'wall': 1.28, 'decoded': 0.72026, 'rss': 0.582992, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark.zarr                  main024      rep 4  {'wall': 1.27, 'decoded': 0.71761, 'rss': 0.581184, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark.zarr                  main024      rep 5  {'wall': 1.49, 'decoded': 0.82814, 'rss': 0.581248, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark.zarr                  box          rep 5  {'wall': 1.59, 'decoded': 0.7123400000000001, 'rss': 0.583056, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark.zarr                  box          rep 6  {'wall': 1.48, 'decoded': 0.7673, 'rss': 0.582976, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark.zarr                  main024      rep 6  {'wall': 1.31, 'decoded': 0.73248, 'rss': 0.581168, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark.zarr                  main024      rep 7  {'wall': 1.26, 'decoded': 0.69771, 'rss': 0.581264, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark.zarr                  box          rep 7  {'wall': 1.23, 'decoded': 0.71366, 'rss': 0.583184, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark.zarr                  box          rep 8  {'wall': 1.37, 'decoded': 0.83109, 'rss': 0.583024, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark.zarr                  main024      rep 8  {'wall': 1.3, 'decoded': 0.71837, 'rss': 0.581264, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark.zarr                  main024      rep 9  {'wall': 1.26, 'decoded': 0.72614, 'rss': 0.581264, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark.zarr                  box          rep 9  {'wall': 1.46, 'decoded': 0.8604299999999999, 'rss': 0.583088, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+      case          image  main024 median (s)  main024 p20 (s)  main024 p80 (s)  main024 decoded (s)  main024 wall (s)  main024 memory (GB)                       main024 pools  box median (s)  box p20 (s)  box p80 (s)  box decoded (s)  box wall (s)  box memory (GB)                       box pools  box time / main024 time  main024 / box median speedup
+chunks c=8 benchmark.zarr            0.722255         0.701736         0.751184              0.69771              1.24             0.581168 single pool zarrs 0.2.3 fallbacks 0         0.73168     0.713396      0.83522          0.69612          1.23         0.582976 (64, 8) zarrs 0.2.3 fallbacks 0                 0.997721                      0.987119
+chunks c=1     data/benchmark_compress.zarr         main024      rep 0  {'wall': 0.9, 'decoded': 0.40023000000000003, 'rss': 0.123824, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress.zarr         box          rep 0  {'wall': 1.03, 'decoded': 0.38550999999999996, 'rss': 0.125552, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress.zarr         main024      rep 1  {'wall': 0.89, 'decoded': 0.38145, 'rss': 0.123872, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress.zarr         box          rep 1  {'wall': 1.02, 'decoded': 0.36824, 'rss': 0.12688, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress.zarr         main024      rep 2  {'wall': 0.92, 'decoded': 0.37223, 'rss': 0.123712, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress.zarr         box          rep 2  {'wall': 0.89, 'decoded': 0.38762, 'rss': 0.126912, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress.zarr         box          rep 3  {'wall': 1.03, 'decoded': 0.36745, 'rss': 0.125552, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress.zarr         main024      rep 3  {'wall': 0.92, 'decoded': 0.40208, 'rss': 0.123744, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress.zarr         main024      rep 4  {'wall': 1.01, 'decoded': 0.38861, 'rss': 0.12376, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress.zarr         box          rep 4  {'wall': 1.03, 'decoded': 0.39457, 'rss': 0.125584, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress.zarr         box          rep 5  {'wall': 1.0, 'decoded': 0.39282999999999996, 'rss': 0.125616, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress.zarr         main024      rep 5  {'wall': 1.02, 'decoded': 0.36324, 'rss': 0.123712, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress.zarr         main024      rep 6  {'wall': 1.0, 'decoded': 0.37533, 'rss': 0.124912, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress.zarr         box          rep 6  {'wall': 0.95, 'decoded': 0.38750999999999997, 'rss': 0.125488, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress.zarr         main024      rep 7  {'wall': 1.0, 'decoded': 0.37451999999999996, 'rss': 0.123744, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress.zarr         box          rep 7  {'wall': 1.04, 'decoded': 0.38167, 'rss': 0.125584, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress.zarr         main024      rep 8  {'wall': 0.85, 'decoded': 0.36685, 'rss': 0.123664, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress.zarr         box          rep 8  {'wall': 1.0, 'decoded': 0.37041, 'rss': 0.125488, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress.zarr         main024      rep 9  {'wall': 1.03, 'decoded': 0.38848, 'rss': 0.123712, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress.zarr         box          rep 9  {'wall': 0.96, 'decoded': 0.36325, 'rss': 0.125632, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+      case                   image  main024 median (s)  main024 p20 (s)  main024 p80 (s)  main024 decoded (s)  main024 wall (s)  main024 memory (GB)                       main024 pools  box median (s)  box p20 (s)  box p80 (s)  box decoded (s)  box wall (s)  box memory (GB)                       box pools  box time / main024 time  main024 / box median speedup
+chunks c=1 benchmark_compress.zarr             0.37839         0.371154         0.390934              0.36324              0.85             0.123664 single pool zarrs 0.2.3 fallbacks 0         0.38359     0.368082     0.388662          0.36325          0.89         0.125488 (64, 8) zarrs 0.2.3 fallbacks 0                 1.000028                      0.986444
+chunks c=2     data/benchmark_compress.zarr         main024      rep 0  {'wall': 0.81, 'decoded': 0.21808000000000002, 'rss': 0.192336, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress.zarr         box          rep 0  {'wall': 0.72, 'decoded': 0.21721000000000001, 'rss': 0.192992, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress.zarr         main024      rep 1  {'wall': 0.79, 'decoded': 0.21283000000000002, 'rss': 0.190944, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress.zarr         box          rep 1  {'wall': 0.77, 'decoded': 0.21091, 'rss': 0.192848, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress.zarr         main024      rep 2  {'wall': 0.97, 'decoded': 0.21849000000000002, 'rss': 0.19104, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress.zarr         box          rep 2  {'wall': 0.81, 'decoded': 0.22619, 'rss': 0.192816, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress.zarr         main024      rep 3  {'wall': 0.8, 'decoded': 0.21581999999999998, 'rss': 0.190992, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress.zarr         box          rep 3  {'wall': 0.87, 'decoded': 0.22107, 'rss': 0.192912, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress.zarr         main024      rep 4  {'wall': 0.8, 'decoded': 0.2091, 'rss': 0.190992, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress.zarr         box          rep 4  {'wall': 0.81, 'decoded': 0.2171, 'rss': 0.192784, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress.zarr         box          rep 5  {'wall': 0.79, 'decoded': 0.213, 'rss': 0.193072, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress.zarr         main024      rep 5  {'wall': 0.83, 'decoded': 0.22175999999999998, 'rss': 0.19104, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress.zarr         box          rep 6  {'wall': 0.91, 'decoded': 0.22802, 'rss': 0.192832, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress.zarr         main024      rep 6  {'wall': 1.0, 'decoded': 0.22644, 'rss': 0.190928, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress.zarr         box          rep 7  {'wall': 0.91, 'decoded': 0.22156, 'rss': 0.192832, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress.zarr         main024      rep 7  {'wall': 0.78, 'decoded': 0.21267, 'rss': 0.190928, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress.zarr         box          rep 8  {'wall': 0.8, 'decoded': 0.22307, 'rss': 0.194176, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress.zarr         main024      rep 8  {'wall': 0.93, 'decoded': 0.24767, 'rss': 0.192336, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress.zarr         box          rep 9  {'wall': 0.79, 'decoded': 0.22168000000000002, 'rss': 0.192864, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress.zarr         main024      rep 9  {'wall': 0.83, 'decoded': 0.23141, 'rss': 0.190944, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+      case                   image  main024 median (s)  main024 p20 (s)  main024 p80 (s)  main024 decoded (s)  main024 wall (s)  main024 memory (GB)                       main024 pools  box median (s)  box p20 (s)  box p80 (s)  box decoded (s)  box wall (s)  box memory (GB)                       box pools  box time / main024 time  main024 / box median speedup
+chunks c=2 benchmark_compress.zarr            0.218285         0.212798         0.227434               0.2091              0.78             0.190928 single pool zarrs 0.2.3 fallbacks 0        0.221315      0.21628     0.223694          0.21091          0.72         0.192784 (64, 8) zarrs 0.2.3 fallbacks 0                 1.008656                      0.986309
+chunks c=4     data/benchmark_compress.zarr         box          rep 0  {'wall': 0.71, 'decoded': 0.15672999999999998, 'rss': 0.332, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress.zarr         main024      rep 0  {'wall': 0.8, 'decoded': 0.15259, 'rss': 0.334544, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress.zarr         main024      rep 1  {'wall': 0.73, 'decoded': 0.14906999999999998, 'rss': 0.331664, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress.zarr         box          rep 1  {'wall': 0.89, 'decoded': 0.15838999999999998, 'rss': 0.335136, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress.zarr         main024      rep 2  {'wall': 0.74, 'decoded': 0.16669, 'rss': 0.33168, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress.zarr         box          rep 2  {'wall': 0.8, 'decoded': 0.14848, 'rss': 0.3336, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress.zarr         box          rep 3  {'wall': 0.76, 'decoded': 0.14205, 'rss': 0.33232, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress.zarr         main024      rep 3  {'wall': 0.65, 'decoded': 0.15837, 'rss': 0.329984, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress.zarr         main024      rep 4  {'wall': 0.78, 'decoded': 0.14639, 'rss': 0.330048, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress.zarr         box          rep 4  {'wall': 0.77, 'decoded': 0.15031999999999998, 'rss': 0.333168, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress.zarr         box          rep 5  {'wall': 0.74, 'decoded': 0.14387, 'rss': 0.33192, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress.zarr         main024      rep 5  {'wall': 0.75, 'decoded': 0.14619, 'rss': 0.327584, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress.zarr         main024      rep 6  {'wall': 0.73, 'decoded': 0.14934, 'rss': 0.328896, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress.zarr         box          rep 6  {'wall': 0.73, 'decoded': 0.14606, 'rss': 0.330608, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress.zarr         box          rep 7  {'wall': 0.75, 'decoded': 0.14214, 'rss': 0.335104, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress.zarr         main024      rep 7  {'wall': 0.8, 'decoded': 0.14276, 'rss': 0.331952, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress.zarr         main024      rep 8  {'wall': 0.67, 'decoded': 0.14612, 'rss': 0.330064, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress.zarr         box          rep 8  {'wall': 0.74, 'decoded': 0.14253, 'rss': 0.331952, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress.zarr         box          rep 9  {'wall': 0.79, 'decoded': 0.15062, 'rss': 0.33208, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress.zarr         main024      rep 9  {'wall': 0.73, 'decoded': 0.14018, 'rss': 0.330384, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+      case                   image  main024 median (s)  main024 p20 (s)  main024 p80 (s)  main024 decoded (s)  main024 wall (s)  main024 memory (GB)                       main024 pools  box median (s)  box p20 (s)  box p80 (s)  box decoded (s)  box wall (s)  box memory (GB)                       box pools  box time / main024 time  main024 / box median speedup
+chunks c=4 benchmark_compress.zarr             0.14773         0.145448         0.153746              0.14018              0.65             0.327584 single pool zarrs 0.2.3 fallbacks 0         0.14727     0.142452     0.151842          0.14205          0.71         0.330608 (64, 8) zarrs 0.2.3 fallbacks 0                  1.01334                      1.003124
+chunks c=8     data/benchmark_compress.zarr         box          rep 0  {'wall': 0.77, 'decoded': 0.1346, 'rss': 0.6064, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress.zarr         main024      rep 0  {'wall': 0.86, 'decoded': 0.12290000000000001, 'rss': 0.602864, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress.zarr         box          rep 1  {'wall': 0.77, 'decoded': 0.12440000000000001, 'rss': 0.608176, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress.zarr         main024      rep 1  {'wall': 0.8, 'decoded': 0.12404000000000001, 'rss': 0.603072, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress.zarr         box          rep 2  {'wall': 0.71, 'decoded': 0.12221, 'rss': 0.608576, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress.zarr         main024      rep 2  {'wall': 0.71, 'decoded': 0.12304999999999999, 'rss': 0.605872, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress.zarr         main024      rep 3  {'wall': 0.79, 'decoded': 0.12619, 'rss': 0.603632, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress.zarr         box          rep 3  {'wall': 0.71, 'decoded': 0.12931, 'rss': 0.61224, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress.zarr         main024      rep 4  {'wall': 0.89, 'decoded': 0.12373, 'rss': 0.602256, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress.zarr         box          rep 4  {'wall': 0.74, 'decoded': 0.13019, 'rss': 0.612272, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress.zarr         main024      rep 5  {'wall': 0.75, 'decoded': 0.12705, 'rss': 0.605136, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress.zarr         box          rep 5  {'wall': 0.82, 'decoded': 0.13111, 'rss': 0.605456, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress.zarr         main024      rep 6  {'wall': 0.72, 'decoded': 0.13686, 'rss': 0.60216, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress.zarr         box          rep 6  {'wall': 0.71, 'decoded': 0.12362999999999999, 'rss': 0.612048, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress.zarr         main024      rep 7  {'wall': 0.76, 'decoded': 0.12492, 'rss': 0.606352, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress.zarr         box          rep 7  {'wall': 0.72, 'decoded': 0.12768000000000002, 'rss': 0.61216, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress.zarr         box          rep 8  {'wall': 0.76, 'decoded': 0.12631, 'rss': 0.610432, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress.zarr         main024      rep 8  {'wall': 1.05, 'decoded': 0.13122999999999999, 'rss': 0.608384, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress.zarr         main024      rep 9  {'wall': 0.71, 'decoded': 0.13306, 'rss': 0.604592, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress.zarr         box          rep 9  {'wall': 0.73, 'decoded': 0.1252, 'rss': 0.609248, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+      case                   image  main024 median (s)  main024 p20 (s)  main024 p80 (s)  main024 decoded (s)  main024 wall (s)  main024 memory (GB)                       main024 pools  box median (s)  box p20 (s)  box p80 (s)  box decoded (s)  box wall (s)  box memory (GB)                       box pools  box time / main024 time  main024 / box median speedup
+chunks c=8 benchmark_compress.zarr            0.125555         0.123594         0.131596               0.1229              0.71              0.60216 single pool zarrs 0.2.3 fallbacks 0        0.126995     0.124246     0.130374          0.12221          0.71         0.605456 (64, 8) zarrs 0.2.3 fallbacks 0                 0.994386                      0.988661
+chunks c=1     data/benchmark_compress_shard.zarr   main024      rep 0  {'wall': 1.18, 'decoded': 0.5389400000000001, 'rss': 0.134864, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress_shard.zarr   box          rep 0  {'wall': 1.16, 'decoded': 0.50019, 'rss': 0.108624, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress_shard.zarr   main024      rep 1  {'wall': 1.16, 'decoded': 0.48832, 'rss': 0.134848, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress_shard.zarr   box          rep 1  {'wall': 1.18, 'decoded': 0.47012, 'rss': 0.1104, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress_shard.zarr   box          rep 2  {'wall': 1.04, 'decoded': 0.45348, 'rss': 0.109648, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress_shard.zarr   main024      rep 2  {'wall': 1.07, 'decoded': 0.49244, 'rss': 0.13488, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress_shard.zarr   main024      rep 3  {'wall': 1.12, 'decoded': 0.53843, 'rss': 0.1364, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress_shard.zarr   box          rep 3  {'wall': 1.1, 'decoded': 0.48544, 'rss': 0.10856, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress_shard.zarr   box          rep 4  {'wall': 1.12, 'decoded': 0.45876, 'rss': 0.108576, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress_shard.zarr   main024      rep 4  {'wall': 1.12, 'decoded': 0.48895, 'rss': 0.13496, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress_shard.zarr   main024      rep 5  {'wall': 1.0, 'decoded': 0.48636, 'rss': 0.134912, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress_shard.zarr   box          rep 5  {'wall': 0.99, 'decoded': 0.47724, 'rss': 0.108528, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress_shard.zarr   main024      rep 6  {'wall': 1.11, 'decoded': 0.50328, 'rss': 0.134928, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress_shard.zarr   box          rep 6  {'wall': 1.05, 'decoded': 0.46132999999999996, 'rss': 0.107472, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress_shard.zarr   main024      rep 7  {'wall': 1.1, 'decoded': 0.47508999999999996, 'rss': 0.134928, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress_shard.zarr   box          rep 7  {'wall': 1.07, 'decoded': 0.47064999999999996, 'rss': 0.111088, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress_shard.zarr   box          rep 8  {'wall': 1.04, 'decoded': 0.47058999999999995, 'rss': 0.110592, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress_shard.zarr   main024      rep 8  {'wall': 1.14, 'decoded': 0.48742, 'rss': 0.134864, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress_shard.zarr   box          rep 9  {'wall': 1.07, 'decoded': 0.46163, 'rss': 0.108784, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=1     data/benchmark_compress_shard.zarr   main024      rep 9  {'wall': 1.02, 'decoded': 0.475, 'rss': 0.134896, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+      case                         image  main024 median (s)  main024 p20 (s)  main024 p80 (s)  main024 decoded (s)  main024 wall (s)  main024 memory (GB)                       main024 pools  box median (s)  box p20 (s)  box p80 (s)  box decoded (s)  box wall (s)  box memory (GB)                       box pools  box time / main024 time  main024 / box median speedup
+chunks c=1 benchmark_compress_shard.zarr            0.488635         0.484106          0.51031                0.475               1.0             0.134848 single pool zarrs 0.2.3 fallbacks 0        0.470355     0.460816      0.47888          0.45348          0.99         0.107472 (64, 8) zarrs 0.2.3 fallbacks 0                 0.954695                      1.038864
+chunks c=2     data/benchmark_compress_shard.zarr   box          rep 0  {'wall': 0.95, 'decoded': 0.33931, 'rss': 0.179312, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress_shard.zarr   main024      rep 0  {'wall': 1.04, 'decoded': 0.42651999999999995, 'rss': 0.237408, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress_shard.zarr   box          rep 1  {'wall': 1.01, 'decoded': 0.35719, 'rss': 0.179328, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress_shard.zarr   main024      rep 1  {'wall': 1.1, 'decoded': 0.44798000000000004, 'rss': 0.237472, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress_shard.zarr   box          rep 2  {'wall': 1.03, 'decoded': 0.36532, 'rss': 0.179392, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress_shard.zarr   main024      rep 2  {'wall': 1.05, 'decoded': 0.46523000000000003, 'rss': 0.237456, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress_shard.zarr   main024      rep 3  {'wall': 1.11, 'decoded': 0.49098, 'rss': 0.237584, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress_shard.zarr   box          rep 3  {'wall': 1.4, 'decoded': 0.36895999999999995, 'rss': 0.179536, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress_shard.zarr   box          rep 4  {'wall': 0.97, 'decoded': 0.39438999999999996, 'rss': 0.179552, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress_shard.zarr   main024      rep 4  {'wall': 1.13, 'decoded': 0.47749, 'rss': 0.239072, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress_shard.zarr   box          rep 5  {'wall': 0.97, 'decoded': 0.37194, 'rss': 0.180592, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress_shard.zarr   main024      rep 5  {'wall': 1.07, 'decoded': 0.49141, 'rss': 0.23704, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress_shard.zarr   box          rep 6  {'wall': 0.94, 'decoded': 0.38427, 'rss': 0.179584, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress_shard.zarr   main024      rep 6  {'wall': 1.04, 'decoded': 0.47367000000000004, 'rss': 0.23704, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress_shard.zarr   box          rep 7  {'wall': 0.96, 'decoded': 0.36168, 'rss': 0.179472, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress_shard.zarr   main024      rep 7  {'wall': 0.98, 'decoded': 0.45025, 'rss': 0.239008, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress_shard.zarr   main024      rep 8  {'wall': 0.85, 'decoded': 0.42544, 'rss': 0.237472, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress_shard.zarr   box          rep 8  {'wall': 0.98, 'decoded': 0.3548, 'rss': 0.177904, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress_shard.zarr   box          rep 9  {'wall': 0.94, 'decoded': 0.35514999999999997, 'rss': 0.177584, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=2     data/benchmark_compress_shard.zarr   main024      rep 9  {'wall': 1.03, 'decoded': 0.4263, 'rss': 0.237536, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+      case                         image  main024 median (s)  main024 p20 (s)  main024 p80 (s)  main024 decoded (s)  main024 wall (s)  main024 memory (GB)                       main024 pools  box median (s)  box p20 (s)  box p80 (s)  box decoded (s)  box wall (s)  box memory (GB)                       box pools  box time / main024 time  main024 / box median speedup
+chunks c=2 benchmark_compress_shard.zarr             0.45774         0.426476         0.480188              0.42544              0.85              0.23704 single pool zarrs 0.2.3 fallbacks 0          0.3635      0.35508     0.374406          0.33931          0.94         0.177584 (64, 8) zarrs 0.2.3 fallbacks 0                 0.797551                      1.259257
+chunks c=4     data/benchmark_compress_shard.zarr   box          rep 0  {'wall': 0.94, 'decoded': 0.32398000000000005, 'rss': 0.26288, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress_shard.zarr   main024      rep 0  {'wall': 0.98, 'decoded': 0.39089999999999997, 'rss': 0.368064, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress_shard.zarr   main024      rep 1  {'wall': 0.99, 'decoded': 0.36991, 'rss': 0.369424, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress_shard.zarr   box          rep 1  {'wall': 0.91, 'decoded': 0.34187, 'rss': 0.259168, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress_shard.zarr   box          rep 2  {'wall': 0.94, 'decoded': 0.33644999999999997, 'rss': 0.2592, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress_shard.zarr   main024      rep 2  {'wall': 0.89, 'decoded': 0.36892, 'rss': 0.358976, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress_shard.zarr   main024      rep 3  {'wall': 1.03, 'decoded': 0.41294, 'rss': 0.369344, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress_shard.zarr   box          rep 3  {'wall': 0.81, 'decoded': 0.33762000000000003, 'rss': 0.262288, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress_shard.zarr   main024      rep 4  {'wall': 0.98, 'decoded': 0.37901999999999997, 'rss': 0.359216, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress_shard.zarr   box          rep 4  {'wall': 0.94, 'decoded': 0.33895, 'rss': 0.262848, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress_shard.zarr   box          rep 5  {'wall': 0.93, 'decoded': 0.33873000000000003, 'rss': 0.264656, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress_shard.zarr   main024      rep 5  {'wall': 0.96, 'decoded': 0.36705, 'rss': 0.359184, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress_shard.zarr   box          rep 6  {'wall': 0.93, 'decoded': 0.33503, 'rss': 0.259776, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress_shard.zarr   main024      rep 6  {'wall': 0.98, 'decoded': 0.38867, 'rss': 0.367904, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress_shard.zarr   main024      rep 7  {'wall': 0.94, 'decoded': 0.38731, 'rss': 0.36936, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress_shard.zarr   box          rep 7  {'wall': 1.01, 'decoded': 0.33996, 'rss': 0.262736, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress_shard.zarr   main024      rep 8  {'wall': 0.98, 'decoded': 0.36452999999999997, 'rss': 0.368032, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress_shard.zarr   box          rep 8  {'wall': 0.94, 'decoded': 0.33782, 'rss': 0.2644, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress_shard.zarr   box          rep 9  {'wall': 0.91, 'decoded': 0.33456, 'rss': 0.268336, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=4     data/benchmark_compress_shard.zarr   main024      rep 9  {'wall': 0.96, 'decoded': 0.37689999999999996, 'rss': 0.409712, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+      case                         image  main024 median (s)  main024 p20 (s)  main024 p80 (s)  main024 decoded (s)  main024 wall (s)  main024 memory (GB)                       main024 pools  box median (s)  box p20 (s)  box p80 (s)  box decoded (s)  box wall (s)  box memory (GB)                       box pools  box time / main024 time  main024 / box median speedup
+chunks c=4 benchmark_compress_shard.zarr             0.37796         0.368546         0.389116              0.36453              0.89             0.358976 single pool zarrs 0.2.3 fallbacks 0         0.33772     0.334936     0.339152          0.32398          0.81         0.259168 (64, 8) zarrs 0.2.3 fallbacks 0                 0.888761                      1.119152
+chunks c=8     data/benchmark_compress_shard.zarr   box          rep 0  {'wall': 0.9, 'decoded': 0.32455, 'rss': 0.434624, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress_shard.zarr   main024      rep 0  {'wall': 0.94, 'decoded': 0.33523000000000003, 'rss': 0.499232, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress_shard.zarr   main024      rep 1  {'wall': 0.95, 'decoded': 0.34354, 'rss': 0.54272, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress_shard.zarr   box          rep 1  {'wall': 0.92, 'decoded': 0.33523000000000003, 'rss': 0.419664, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress_shard.zarr   main024      rep 2  {'wall': 0.98, 'decoded': 0.33146, 'rss': 0.566592, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress_shard.zarr   box          rep 2  {'wall': 0.92, 'decoded': 0.32466, 'rss': 0.439328, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress_shard.zarr   box          rep 3  {'wall': 0.97, 'decoded': 0.33736, 'rss': 0.432272, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress_shard.zarr   main024      rep 3  {'wall': 0.97, 'decoded': 0.33501, 'rss': 0.508192, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress_shard.zarr   main024      rep 4  {'wall': 0.98, 'decoded': 0.34782, 'rss': 0.541008, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress_shard.zarr   box          rep 4  {'wall': 1.03, 'decoded': 0.32249, 'rss': 0.434032, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress_shard.zarr   main024      rep 5  {'wall': 1.0, 'decoded': 0.36088, 'rss': 0.5492, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress_shard.zarr   box          rep 5  {'wall': 0.78, 'decoded': 0.33879000000000004, 'rss': 0.420928, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress_shard.zarr   box          rep 6  {'wall': 0.9, 'decoded': 0.32083, 'rss': 0.428304, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress_shard.zarr   main024      rep 6  {'wall': 0.95, 'decoded': 0.34914, 'rss': 0.499776, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress_shard.zarr   main024      rep 7  {'wall': 0.92, 'decoded': 0.33349, 'rss': 0.508224, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress_shard.zarr   box          rep 7  {'wall': 0.92, 'decoded': 0.33597000000000005, 'rss': 0.420416, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress_shard.zarr   box          rep 8  {'wall': 0.98, 'decoded': 0.35654, 'rss': 0.431408, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress_shard.zarr   main024      rep 8  {'wall': 0.93, 'decoded': 0.35502999999999996, 'rss': 0.542224, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress_shard.zarr   box          rep 9  {'wall': 0.95, 'decoded': 0.32965, 'rss': 0.414464, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+chunks c=8     data/benchmark_compress_shard.zarr   main024      rep 9  {'wall': 0.81, 'decoded': 0.33979000000000004, 'rss': 0.49936, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+      case                         image  main024 median (s)  main024 p20 (s)  main024 p80 (s)  main024 decoded (s)  main024 wall (s)  main024 memory (GB)                       main024 pools  box median (s)  box p20 (s)  box p80 (s)  box decoded (s)  box wall (s)  box memory (GB)                       box pools  box time / main024 time  main024 / box median speedup
+chunks c=8 benchmark_compress_shard.zarr            0.341665         0.334706         0.350318              0.33146              0.81             0.499232 single pool zarrs 0.2.3 fallbacks 0         0.33244     0.324138     0.337646          0.32083          0.78         0.414464 (64, 8) zarrs 0.2.3 fallbacks 0                  0.96793                      1.027749
+subchunks c=1  data/benchmark_compress_shard.zarr   box          rep 0  {'wall': 2.93, 'decoded': 2.34997, 'rss': 0.059488, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=1  data/benchmark_compress_shard.zarr   main024      rep 0  {'wall': 3.08, 'decoded': 2.51138, 'rss': 0.05912, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=1  data/benchmark_compress_shard.zarr   main024      rep 1  {'wall': 3.23, 'decoded': 2.6431, 'rss': 0.058736, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=1  data/benchmark_compress_shard.zarr   box          rep 1  {'wall': 3.08, 'decoded': 2.52457, 'rss': 0.05944, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=1  data/benchmark_compress_shard.zarr   box          rep 2  {'wall': 2.87, 'decoded': 2.37007, 'rss': 0.059408, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=1  data/benchmark_compress_shard.zarr   main024      rep 2  {'wall': 3.12, 'decoded': 2.5484400000000003, 'rss': 0.058624, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=1  data/benchmark_compress_shard.zarr   main024      rep 3  {'wall': 3.05, 'decoded': 2.5353499999999998, 'rss': 0.059264, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=1  data/benchmark_compress_shard.zarr   box          rep 3  {'wall': 3.04, 'decoded': 2.47561, 'rss': 0.05952, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=1  data/benchmark_compress_shard.zarr   box          rep 4  {'wall': 2.87, 'decoded': 2.4386799999999997, 'rss': 0.059616, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=1  data/benchmark_compress_shard.zarr   main024      rep 4  {'wall': 3.07, 'decoded': 2.5223899999999997, 'rss': 0.058736, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=1  data/benchmark_compress_shard.zarr   box          rep 5  {'wall': 2.93, 'decoded': 2.33604, 'rss': 0.059504, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=1  data/benchmark_compress_shard.zarr   main024      rep 5  {'wall': 3.26, 'decoded': 2.51775, 'rss': 0.058688, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=1  data/benchmark_compress_shard.zarr   box          rep 6  {'wall': 2.99, 'decoded': 2.37587, 'rss': 0.05952, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=1  data/benchmark_compress_shard.zarr   main024      rep 6  {'wall': 3.06, 'decoded': 2.49239, 'rss': 0.0588, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=1  data/benchmark_compress_shard.zarr   box          rep 7  {'wall': 2.93, 'decoded': 2.3415700000000004, 'rss': 0.059472, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=1  data/benchmark_compress_shard.zarr   main024      rep 7  {'wall': 3.11, 'decoded': 2.4917399999999996, 'rss': 0.060352, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=1  data/benchmark_compress_shard.zarr   main024      rep 8  {'wall': 2.92, 'decoded': 2.49879, 'rss': 0.05872, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=1  data/benchmark_compress_shard.zarr   box          rep 8  {'wall': 2.92, 'decoded': 2.34212, 'rss': 0.059376, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=1  data/benchmark_compress_shard.zarr   main024      rep 9  {'wall': 3.04, 'decoded': 2.44926, 'rss': 0.058768, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=1  data/benchmark_compress_shard.zarr   box          rep 9  {'wall': 2.91, 'decoded': 2.33426, 'rss': 0.059488, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+         case                         image  main024 median (s)  main024 p20 (s)  main024 p80 (s)  main024 decoded (s)  main024 wall (s)  main024 memory (GB)                       main024 pools  box median (s)  box p20 (s)  box p80 (s)  box decoded (s)  box wall (s)  box memory (GB)                       box pools  box time / main024 time  main024 / box median speedup
+subchunks c=1 benchmark_compress_shard.zarr            2.514565          2.49226         2.537968              2.44926              2.92             0.058624 single pool zarrs 0.2.3 fallbacks 0         2.36002     2.340464     2.446066          2.33426          2.87         0.059376 (64, 8) zarrs 0.2.3 fallbacks 0                 0.953047                      1.065485
+subchunks c=2  data/benchmark_compress_shard.zarr   box          rep 0  {'wall': 1.73, 'decoded': 1.16944, 'rss': 0.067824, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=2  data/benchmark_compress_shard.zarr   main024      rep 0  {'wall': 1.76, 'decoded': 1.10443, 'rss': 0.067904, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=2  data/benchmark_compress_shard.zarr   main024      rep 1  {'wall': 1.73, 'decoded': 1.15105, 'rss': 0.06768, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=2  data/benchmark_compress_shard.zarr   box          rep 1  {'wall': 1.71, 'decoded': 1.06674, 'rss': 0.067904, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=2  data/benchmark_compress_shard.zarr   box          rep 2  {'wall': 1.59, 'decoded': 1.04644, 'rss': 0.067856, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=2  data/benchmark_compress_shard.zarr   main024      rep 2  {'wall': 1.67, 'decoded': 1.11126, 'rss': 0.067392, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=2  data/benchmark_compress_shard.zarr   box          rep 3  {'wall': 1.71, 'decoded': 1.11399, 'rss': 0.067936, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=2  data/benchmark_compress_shard.zarr   main024      rep 3  {'wall': 1.75, 'decoded': 1.1226099999999999, 'rss': 0.067376, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=2  data/benchmark_compress_shard.zarr   main024      rep 4  {'wall': 1.65, 'decoded': 1.13252, 'rss': 0.067904, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=2  data/benchmark_compress_shard.zarr   box          rep 4  {'wall': 1.76, 'decoded': 1.0954300000000001, 'rss': 0.068544, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=2  data/benchmark_compress_shard.zarr   box          rep 5  {'wall': 1.72, 'decoded': 1.14063, 'rss': 0.068, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=2  data/benchmark_compress_shard.zarr   main024      rep 5  {'wall': 1.74, 'decoded': 1.14131, 'rss': 0.06728, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=2  data/benchmark_compress_shard.zarr   main024      rep 6  {'wall': 1.75, 'decoded': 1.0830199999999999, 'rss': 0.067408, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=2  data/benchmark_compress_shard.zarr   box          rep 6  {'wall': 1.69, 'decoded': 1.0546300000000002, 'rss': 0.067824, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=2  data/benchmark_compress_shard.zarr   box          rep 7  {'wall': 1.67, 'decoded': 1.09877, 'rss': 0.067888, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=2  data/benchmark_compress_shard.zarr   main024      rep 7  {'wall': 1.69, 'decoded': 1.09867, 'rss': 0.067264, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=2  data/benchmark_compress_shard.zarr   main024      rep 8  {'wall': 1.67, 'decoded': 1.1008399999999998, 'rss': 0.067392, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=2  data/benchmark_compress_shard.zarr   box          rep 8  {'wall': 1.66, 'decoded': 1.0795899999999998, 'rss': 0.068032, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=2  data/benchmark_compress_shard.zarr   main024      rep 9  {'wall': 1.74, 'decoded': 1.15227, 'rss': 0.067232, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=2  data/benchmark_compress_shard.zarr   box          rep 9  {'wall': 1.69, 'decoded': 1.06287, 'rss': 0.067904, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+         case                         image  main024 median (s)  main024 p20 (s)  main024 p80 (s)  main024 decoded (s)  main024 wall (s)  main024 memory (GB)                       main024 pools  box median (s)  box p20 (s)  box p80 (s)  box decoded (s)  box wall (s)  box memory (GB)                       box pools  box time / main024 time  main024 / box median speedup
+subchunks c=2 benchmark_compress_shard.zarr            1.116935         1.100406         1.143258              1.08302              1.65             0.067232 single pool zarrs 0.2.3 fallbacks 0         1.08751     1.061222     1.119318          1.04644          1.59         0.067824 (64, 8) zarrs 0.2.3 fallbacks 0                 0.966224                      1.027057
+subchunks c=4  data/benchmark_compress_shard.zarr   box          rep 0  {'wall': 1.26, 'decoded': 0.64544, 'rss': 0.071728, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=4  data/benchmark_compress_shard.zarr   main024      rep 0  {'wall': 1.54, 'decoded': 0.93321, 'rss': 0.074512, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=4  data/benchmark_compress_shard.zarr   box          rep 1  {'wall': 1.36, 'decoded': 0.76148, 'rss': 0.075632, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=4  data/benchmark_compress_shard.zarr   main024      rep 1  {'wall': 1.43, 'decoded': 0.8432799999999999, 'rss': 0.074, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=4  data/benchmark_compress_shard.zarr   main024      rep 2  {'wall': 1.39, 'decoded': 0.84186, 'rss': 0.072032, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=4  data/benchmark_compress_shard.zarr   box          rep 2  {'wall': 1.31, 'decoded': 0.70868, 'rss': 0.072816, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=4  data/benchmark_compress_shard.zarr   main024      rep 3  {'wall': 1.53, 'decoded': 0.9173600000000001, 'rss': 0.07464, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=4  data/benchmark_compress_shard.zarr   box          rep 3  {'wall': 1.1, 'decoded': 0.68402, 'rss': 0.071776, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=4  data/benchmark_compress_shard.zarr   main024      rep 4  {'wall': 1.59, 'decoded': 0.9808600000000001, 'rss': 0.074944, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=4  data/benchmark_compress_shard.zarr   box          rep 4  {'wall': 1.2, 'decoded': 0.65596, 'rss': 0.07176, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=4  data/benchmark_compress_shard.zarr   box          rep 5  {'wall': 1.26, 'decoded': 0.65204, 'rss': 0.071744, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=4  data/benchmark_compress_shard.zarr   main024      rep 5  {'wall': 1.49, 'decoded': 0.84148, 'rss': 0.073456, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=4  data/benchmark_compress_shard.zarr   main024      rep 6  {'wall': 1.67, 'decoded': 1.03688, 'rss': 0.074128, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=4  data/benchmark_compress_shard.zarr   box          rep 6  {'wall': 1.3, 'decoded': 0.66399, 'rss': 0.071104, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=4  data/benchmark_compress_shard.zarr   main024      rep 7  {'wall': 1.46, 'decoded': 0.8637100000000001, 'rss': 0.075456, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=4  data/benchmark_compress_shard.zarr   box          rep 7  {'wall': 1.23, 'decoded': 0.65346, 'rss': 0.071664, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=4  data/benchmark_compress_shard.zarr   main024      rep 8  {'wall': 1.5, 'decoded': 0.88586, 'rss': 0.071936, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=4  data/benchmark_compress_shard.zarr   box          rep 8  {'wall': 1.31, 'decoded': 0.6332000000000001, 'rss': 0.071152, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=4  data/benchmark_compress_shard.zarr   box          rep 9  {'wall': 1.25, 'decoded': 0.6397200000000001, 'rss': 0.070976, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=4  data/benchmark_compress_shard.zarr   main024      rep 9  {'wall': 1.4, 'decoded': 0.8060499999999999, 'rss': 0.073552, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+         case                         image  main024 median (s)  main024 p20 (s)  main024 p80 (s)  main024 decoded (s)  main024 wall (s)  main024 memory (GB)                       main024 pools  box median (s)  box p20 (s)  box p80 (s)  box decoded (s)  box wall (s)  box memory (GB)                       box pools  box time / main024 time  main024 / box median speedup
+subchunks c=4 benchmark_compress_shard.zarr            0.874785         0.841784          0.94274              0.80605              1.39             0.071936 single pool zarrs 0.2.3 fallbacks 0         0.65471     0.644296     0.688952           0.6332           1.1         0.070976 (64, 8) zarrs 0.2.3 fallbacks 0                 0.785559                      1.336141
+subchunks c=8  data/benchmark_compress_shard.zarr   box          rep 0  {'wall': 1.09, 'decoded': 0.42404000000000003, 'rss': 0.0776, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=8  data/benchmark_compress_shard.zarr   main024      rep 0  {'wall': 1.36, 'decoded': 0.75976, 'rss': 0.08016, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=8  data/benchmark_compress_shard.zarr   main024      rep 1  {'wall': 1.29, 'decoded': 0.7316699999999999, 'rss': 0.079472, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=8  data/benchmark_compress_shard.zarr   box          rep 1  {'wall': 1.06, 'decoded': 0.43666000000000005, 'rss': 0.07744, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=8  data/benchmark_compress_shard.zarr   box          rep 2  {'wall': 1.03, 'decoded': 0.42921, 'rss': 0.078304, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=8  data/benchmark_compress_shard.zarr   main024      rep 2  {'wall': 1.4, 'decoded': 0.77808, 'rss': 0.0796, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=8  data/benchmark_compress_shard.zarr   main024      rep 3  {'wall': 1.38, 'decoded': 0.76274, 'rss': 0.079632, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=8  data/benchmark_compress_shard.zarr   box          rep 3  {'wall': 1.04, 'decoded': 0.42736, 'rss': 0.077856, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=8  data/benchmark_compress_shard.zarr   main024      rep 4  {'wall': 1.3, 'decoded': 0.7383500000000001, 'rss': 0.081264, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=8  data/benchmark_compress_shard.zarr   box          rep 4  {'wall': 1.08, 'decoded': 0.45465, 'rss': 0.079328, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=8  data/benchmark_compress_shard.zarr   main024      rep 5  {'wall': 1.4, 'decoded': 0.8141, 'rss': 0.080048, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=8  data/benchmark_compress_shard.zarr   box          rep 5  {'wall': 1.06, 'decoded': 0.43143, 'rss': 0.077568, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=8  data/benchmark_compress_shard.zarr   main024      rep 6  {'wall': 1.34, 'decoded': 0.7631, 'rss': 0.080016, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=8  data/benchmark_compress_shard.zarr   box          rep 6  {'wall': 1.09, 'decoded': 0.4348, 'rss': 0.077856, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=8  data/benchmark_compress_shard.zarr   main024      rep 7  {'wall': 1.44, 'decoded': 0.79286, 'rss': 0.080912, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=8  data/benchmark_compress_shard.zarr   box          rep 7  {'wall': 1.18, 'decoded': 0.46199, 'rss': 0.07784, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=8  data/benchmark_compress_shard.zarr   box          rep 8  {'wall': 1.07, 'decoded': 0.44855, 'rss': 0.079456, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+subchunks c=8  data/benchmark_compress_shard.zarr   main024      rep 8  {'wall': 1.33, 'decoded': 0.76379, 'rss': 0.07968, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=8  data/benchmark_compress_shard.zarr   main024      rep 9  {'wall': 1.45, 'decoded': 0.90532, 'rss': 0.08056, 'pools': 'single pool zarrs 0.2.3 fallbacks 0'}
+subchunks c=8  data/benchmark_compress_shard.zarr   box          rep 9  {'wall': 1.14, 'decoded': 0.44123, 'rss': 0.078096, 'pools': '(64, 8) zarrs 0.2.3 fallbacks 0'}
+         case                         image  main024 median (s)  main024 p20 (s)  main024 p80 (s)  main024 decoded (s)  main024 wall (s)  main024 memory (GB)                       main024 pools  box median (s)  box p20 (s)  box p80 (s)  box decoded (s)  box wall (s)  box memory (GB)                       box pools  box time / main024 time  main024 / box median speedup
+subchunks c=8 benchmark_compress_shard.zarr            0.763445         0.755478         0.797108              0.73167              1.29             0.079472 single pool zarrs 0.2.3 fallbacks 0         0.43573      0.42884      0.44977          0.42404          1.03          0.07744 (64, 8) zarrs 0.2.3 fallbacks 0                 0.579551                      1.752106
+roundtrip      data/benchmark.zarr                  main024      rep 0  {'wall': 4.81, 'decoded': 3.9901500000000003, 'rss': 2.427712, 'pools': 'single pool zarrs 0.2.3'}
+roundtrip      data/benchmark.zarr                  box          rep 0  {'wall': 4.09, 'decoded': 3.62746, 'rss': 2.43072, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark.zarr                  main024      rep 1  {'wall': 4.55, 'decoded': 3.90627, 'rss': 2.431872, 'pools': 'single pool zarrs 0.2.3'}
+roundtrip      data/benchmark.zarr                  box          rep 1  {'wall': 5.09, 'decoded': 4.44393, 'rss': 2.435168, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark.zarr                  main024      rep 2  {'wall': 4.84, 'decoded': 4.23754, 'rss': 2.428992, 'pools': 'single pool zarrs 0.2.3'}
+roundtrip      data/benchmark.zarr                  box          rep 2  {'wall': 5.01, 'decoded': 4.42676, 'rss': 2.430848, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark.zarr                  main024      rep 3  {'wall': 4.85, 'decoded': 4.235270000000001, 'rss': 2.42664, 'pools': 'single pool zarrs 0.2.3'}
+roundtrip      data/benchmark.zarr                  box          rep 3  {'wall': 4.86, 'decoded': 4.3137799999999995, 'rss': 2.429488, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark.zarr                  main024      rep 4  {'wall': 4.2, 'decoded': 3.57403, 'rss': 2.428816, 'pools': 'single pool zarrs 0.2.3'}
+roundtrip      data/benchmark.zarr                  box          rep 4  {'wall': 4.04, 'decoded': 3.4341500000000003, 'rss': 2.433424, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark.zarr                  box          rep 5  {'wall': 4.14, 'decoded': 3.51183, 'rss': 2.43416, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark.zarr                  main024      rep 5  {'wall': 5.01, 'decoded': 4.34151, 'rss': 2.42552, 'pools': 'single pool zarrs 0.2.3'}
+roundtrip      data/benchmark.zarr                  main024      rep 6  {'wall': 4.19, 'decoded': 3.5256, 'rss': 2.429344, 'pools': 'single pool zarrs 0.2.3'}
+roundtrip      data/benchmark.zarr                  box          rep 6  {'wall': 3.91, 'decoded': 3.27726, 'rss': 2.433568, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark.zarr                  box          rep 7  {'wall': 4.46, 'decoded': 3.80105, 'rss': 2.42928, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark.zarr                  main024      rep 7  {'wall': 4.32, 'decoded': 3.6241399999999997, 'rss': 2.429696, 'pools': 'single pool zarrs 0.2.3'}
+roundtrip      data/benchmark.zarr                  box          rep 8  {'wall': 4.48, 'decoded': 3.9313000000000002, 'rss': 2.435264, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark.zarr                  main024      rep 8  {'wall': 3.59, 'decoded': 2.9610700000000003, 'rss': 2.43288, 'pools': 'single pool zarrs 0.2.3'}
+roundtrip      data/benchmark.zarr                  box          rep 9  {'wall': 4.4, 'decoded': 3.72478, 'rss': 2.430688, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark.zarr                  main024      rep 9  {'wall': 4.68, 'decoded': 4.0610100000000005, 'rss': 2.425552, 'pools': 'single pool zarrs 0.2.3'}
+     case          image  main024 median (s)  main024 p20 (s)  main024 p80 (s)  main024 decoded (s)  main024 wall (s)  main024 memory (GB)           main024 pools  box median (s)  box p20 (s)  box p80 (s)  box decoded (s)  box wall (s)  box memory (GB)           box pools  box time / main024 time  main024 / box median speedup
+roundtrip benchmark.zarr             3.94821         3.564344         4.235724              2.96107              3.59              2.42552 single pool zarrs 0.2.3        3.762915     3.496294     4.336376          3.27726          3.91          2.42928 (64, 8) zarrs 0.2.3                 1.106782                      1.049242
+roundtrip      data/benchmark_compress.zarr         box          rep 0  {'wall': 1.21, 'decoded': 0.5579, 'rss': 2.460352, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark_compress.zarr         main024      rep 0  {'wall': 1.18, 'decoded': 0.56471, 'rss': 2.454576, 'pools': 'single pool zarrs 0.2.3'}
+roundtrip      data/benchmark_compress.zarr         main024      rep 1  {'wall': 1.19, 'decoded': 0.5534, 'rss': 2.451808, 'pools': 'single pool zarrs 0.2.3'}
+roundtrip      data/benchmark_compress.zarr         box          rep 1  {'wall': 1.06, 'decoded': 0.6013, 'rss': 2.456624, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark_compress.zarr         main024      rep 2  {'wall': 1.14, 'decoded': 0.5729, 'rss': 2.450976, 'pools': 'single pool zarrs 0.2.3'}
+roundtrip      data/benchmark_compress.zarr         box          rep 2  {'wall': 1.16, 'decoded': 0.57573, 'rss': 2.458384, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark_compress.zarr         main024      rep 3  {'wall': 1.19, 'decoded': 0.5586599999999999, 'rss': 2.451664, 'pools': 'single pool zarrs 0.2.3'}
+roundtrip      data/benchmark_compress.zarr         box          rep 3  {'wall': 1.29, 'decoded': 0.6372599999999999, 'rss': 2.452416, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark_compress.zarr         box          rep 4  {'wall': 1.14, 'decoded': 0.57096, 'rss': 2.460592, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark_compress.zarr         main024      rep 4  {'wall': 1.17, 'decoded': 0.61502, 'rss': 2.454704, 'pools': 'single pool zarrs 0.2.3'}
+roundtrip      data/benchmark_compress.zarr         box          rep 5  {'wall': 1.19, 'decoded': 0.60881, 'rss': 2.458992, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark_compress.zarr         main024      rep 5  {'wall': 1.01, 'decoded': 0.57963, 'rss': 2.450624, 'pools': 'single pool zarrs 0.2.3'}
+roundtrip      data/benchmark_compress.zarr         main024      rep 6  {'wall': 1.17, 'decoded': 0.58512, 'rss': 2.450384, 'pools': 'single pool zarrs 0.2.3'}
+roundtrip      data/benchmark_compress.zarr         box          rep 6  {'wall': 1.27, 'decoded': 0.64079, 'rss': 2.456944, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark_compress.zarr         main024      rep 7  {'wall': 1.23, 'decoded': 0.60166, 'rss': 2.449408, 'pools': 'single pool zarrs 0.2.3'}
+roundtrip      data/benchmark_compress.zarr         box          rep 7  {'wall': 1.17, 'decoded': 0.56655, 'rss': 2.460368, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark_compress.zarr         main024      rep 8  {'wall': 1.17, 'decoded': 0.56855, 'rss': 2.449936, 'pools': 'single pool zarrs 0.2.3'}
+roundtrip      data/benchmark_compress.zarr         box          rep 8  {'wall': 1.27, 'decoded': 0.5750299999999999, 'rss': 2.459472, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark_compress.zarr         main024      rep 9  {'wall': 1.21, 'decoded': 0.58656, 'rss': 2.451664, 'pools': 'single pool zarrs 0.2.3'}
+roundtrip      data/benchmark_compress.zarr         box          rep 9  {'wall': 1.21, 'decoded': 0.5964700000000001, 'rss': 2.461024, 'pools': '(64, 8) zarrs 0.2.3'}
+     case                   image  main024 median (s)  main024 p20 (s)  main024 p80 (s)  main024 decoded (s)  main024 wall (s)  main024 memory (GB)           main024 pools  box median (s)  box p20 (s)  box p80 (s)  box decoded (s)  box wall (s)  box memory (GB)           box pools  box time / main024 time  main024 / box median speedup
+roundtrip benchmark_compress.zarr            0.576265           0.5635          0.58958               0.5534              1.01             2.449408 single pool zarrs 0.2.3          0.5861     0.570078       0.6145           0.5579          1.06         2.452416 (64, 8) zarrs 0.2.3                 1.008132                       0.98322
+roundtrip      data/benchmark_compress_shard.zarr   box          rep 0  {'wall': 2.2, 'decoded': 1.5629300000000002, 'rss': 2.452096, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark_compress_shard.zarr   main024      rep 0  {'wall': 2.31, 'decoded': 1.73439, 'rss': 2.326752, 'pools': 'single pool zarrs 0.2.3'}
+roundtrip      data/benchmark_compress_shard.zarr   box          rep 1  {'wall': 2.49, 'decoded': 1.88808, 'rss': 2.42736, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark_compress_shard.zarr   main024      rep 1  {'wall': 2.31, 'decoded': 1.7163599999999999, 'rss': 2.326736, 'pools': 'single pool zarrs 0.2.3'}
+roundtrip      data/benchmark_compress_shard.zarr   main024      rep 2  {'wall': 2.41, 'decoded': 1.81254, 'rss': 2.326816, 'pools': 'single pool zarrs 0.2.3'}
+roundtrip      data/benchmark_compress_shard.zarr   box          rep 2  {'wall': 2.26, 'decoded': 1.67774, 'rss': 2.42256, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark_compress_shard.zarr   box          rep 3  {'wall': 2.21, 'decoded': 1.62528, 'rss': 2.451472, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark_compress_shard.zarr   main024      rep 3  {'wall': 2.17, 'decoded': 1.54158, 'rss': 2.326896, 'pools': 'single pool zarrs 0.2.3'}
+roundtrip      data/benchmark_compress_shard.zarr   main024      rep 4  {'wall': 2.3, 'decoded': 1.73242, 'rss': 2.32688, 'pools': 'single pool zarrs 0.2.3'}
+roundtrip      data/benchmark_compress_shard.zarr   box          rep 4  {'wall': 2.38, 'decoded': 1.78745, 'rss': 2.455664, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark_compress_shard.zarr   box          rep 5  {'wall': 2.45, 'decoded': 1.83471, 'rss': 2.451792, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark_compress_shard.zarr   main024      rep 5  {'wall': 2.18, 'decoded': 1.6035899999999998, 'rss': 2.322576, 'pools': 'single pool zarrs 0.2.3'}
+roundtrip      data/benchmark_compress_shard.zarr   box          rep 6  {'wall': 2.26, 'decoded': 1.68156, 'rss': 2.444592, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark_compress_shard.zarr   main024      rep 6  {'wall': 2.49, 'decoded': 1.85592, 'rss': 2.3276, 'pools': 'single pool zarrs 0.2.3'}
+roundtrip      data/benchmark_compress_shard.zarr   box          rep 7  {'wall': 2.34, 'decoded': 1.7532699999999999, 'rss': 2.448832, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark_compress_shard.zarr   main024      rep 7  {'wall': 2.34, 'decoded': 1.71037, 'rss': 2.322736, 'pools': 'single pool zarrs 0.2.3'}
+roundtrip      data/benchmark_compress_shard.zarr   main024      rep 8  {'wall': 2.29, 'decoded': 1.6941, 'rss': 2.325968, 'pools': 'single pool zarrs 0.2.3'}
+roundtrip      data/benchmark_compress_shard.zarr   box          rep 8  {'wall': 2.17, 'decoded': 1.58653, 'rss': 2.440944, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark_compress_shard.zarr   box          rep 9  {'wall': 2.39, 'decoded': 1.78291, 'rss': 2.411664, 'pools': '(64, 8) zarrs 0.2.3'}
+roundtrip      data/benchmark_compress_shard.zarr   main024      rep 9  {'wall': 2.31, 'decoded': 1.6591900000000002, 'rss': 2.326, 'pools': 'single pool zarrs 0.2.3'}
+     case                         image  main024 median (s)  main024 p20 (s)  main024 p80 (s)  main024 decoded (s)  main024 wall (s)  main024 memory (GB)           main024 pools  box median (s)  box p20 (s)  box p80 (s)  box decoded (s)  box wall (s)  box memory (GB)           box pools  box time / main024 time  main024 / box median speedup
+roundtrip benchmark_compress_shard.zarr            1.713365          1.64807          1.75002              1.54158              2.17             2.322576 single pool zarrs 0.2.3        1.717415      1.61753     1.796902          1.56293          2.17         2.411664 (64, 8) zarrs 0.2.3                 1.013849                      0.997642
+| case          | image                         |   main024 median (s) |   main024 p20 (s) |   main024 p80 (s) |   main024 decoded (s) |   main024 wall (s) |   main024 memory (GB) | main024 pools                       |   box median (s) |   box p20 (s) |   box p80 (s) |   box decoded (s) |   box wall (s) |   box memory (GB) | box pools                       |   box time / main024 time |   main024 / box median speedup |
+|:--------------|:------------------------------|---------------------:|------------------:|------------------:|----------------------:|-------------------:|----------------------:|:------------------------------------|-----------------:|--------------:|--------------:|------------------:|---------------:|------------------:|:--------------------------------|--------------------------:|-------------------------------:|
+| read_all      | benchmark.zarr                |                0.720 |             0.710 |             0.915 |                 0.707 |              1.270 |                 2.416 | single pool zarrs 0.2.3 fallbacks 0 |            0.738 |         0.720 |         0.886 |             0.718 |          1.290 |             2.417 | (64, 8) zarrs 0.2.3 fallbacks 0 |                     1.016 |                          0.975 |
+| read_all      | benchmark_compress.zarr       |                0.216 |             0.212 |             0.223 |                 0.211 |              0.700 |                 2.431 | single pool zarrs 0.2.3 fallbacks 0 |            0.214 |         0.208 |         0.218 |             0.207 |          0.770 |             2.438 | (64, 8) zarrs 0.2.3 fallbacks 0 |                     0.977 |                          1.008 |
+| read_all      | benchmark_compress_shard.zarr |                0.395 |             0.389 |             0.400 |                 0.386 |              0.950 |                 2.275 | single pool zarrs 0.2.3 fallbacks 0 |            0.411 |         0.403 |         0.414 |             0.391 |          0.960 |             2.260 | (64, 8) zarrs 0.2.3 fallbacks 0 |                     1.012 |                          0.961 |
+| chunks c=1    | benchmark.zarr                |                0.799 |             0.786 |             0.853 |                 0.776 |              1.340 |                 0.122 | single pool zarrs 0.2.3 fallbacks 0 |            0.815 |         0.792 |         0.832 |             0.774 |          1.380 |             0.123 | (64, 8) zarrs 0.2.3 fallbacks 0 |                     0.998 |                          0.979 |
+| chunks c=2    | benchmark.zarr                |                0.688 |             0.677 |             0.738 |                 0.671 |              1.160 |                 0.187 | single pool zarrs 0.2.3 fallbacks 0 |            0.684 |         0.680 |         0.706 |             0.673 |          1.240 |             0.189 | (64, 8) zarrs 0.2.3 fallbacks 0 |                     1.004 |                          1.006 |
+| chunks c=4    | benchmark.zarr                |                0.728 |             0.715 |             0.738 |                 0.693 |              1.220 |                 0.319 | single pool zarrs 0.2.3 fallbacks 0 |            0.724 |         0.714 |         0.771 |             0.698 |          1.270 |             0.321 | (64, 8) zarrs 0.2.3 fallbacks 0 |                     1.008 |                          1.006 |
+| chunks c=8    | benchmark.zarr                |                0.722 |             0.702 |             0.751 |                 0.698 |              1.240 |                 0.581 | single pool zarrs 0.2.3 fallbacks 0 |            0.732 |         0.713 |         0.835 |             0.696 |          1.230 |             0.583 | (64, 8) zarrs 0.2.3 fallbacks 0 |                     0.998 |                          0.987 |
+| chunks c=1    | benchmark_compress.zarr       |                0.378 |             0.371 |             0.391 |                 0.363 |              0.850 |                 0.124 | single pool zarrs 0.2.3 fallbacks 0 |            0.384 |         0.368 |         0.389 |             0.363 |          0.890 |             0.125 | (64, 8) zarrs 0.2.3 fallbacks 0 |                     1.000 |                          0.986 |
+| chunks c=2    | benchmark_compress.zarr       |                0.218 |             0.213 |             0.227 |                 0.209 |              0.780 |                 0.191 | single pool zarrs 0.2.3 fallbacks 0 |            0.221 |         0.216 |         0.224 |             0.211 |          0.720 |             0.193 | (64, 8) zarrs 0.2.3 fallbacks 0 |                     1.009 |                          0.986 |
+| chunks c=4    | benchmark_compress.zarr       |                0.148 |             0.145 |             0.154 |                 0.140 |              0.650 |                 0.328 | single pool zarrs 0.2.3 fallbacks 0 |            0.147 |         0.142 |         0.152 |             0.142 |          0.710 |             0.331 | (64, 8) zarrs 0.2.3 fallbacks 0 |                     1.013 |                          1.003 |
+| chunks c=8    | benchmark_compress.zarr       |                0.126 |             0.124 |             0.132 |                 0.123 |              0.710 |                 0.602 | single pool zarrs 0.2.3 fallbacks 0 |            0.127 |         0.124 |         0.130 |             0.122 |          0.710 |             0.605 | (64, 8) zarrs 0.2.3 fallbacks 0 |                     0.994 |                          0.989 |
+| chunks c=1    | benchmark_compress_shard.zarr |                0.489 |             0.484 |             0.510 |                 0.475 |              1.000 |                 0.135 | single pool zarrs 0.2.3 fallbacks 0 |            0.470 |         0.461 |         0.479 |             0.453 |          0.990 |             0.107 | (64, 8) zarrs 0.2.3 fallbacks 0 |                     0.955 |                          1.039 |
+| chunks c=2    | benchmark_compress_shard.zarr |                0.458 |             0.426 |             0.480 |                 0.425 |              0.850 |                 0.237 | single pool zarrs 0.2.3 fallbacks 0 |            0.363 |         0.355 |         0.374 |             0.339 |          0.940 |             0.178 | (64, 8) zarrs 0.2.3 fallbacks 0 |                     0.798 |                          1.259 |
+| chunks c=4    | benchmark_compress_shard.zarr |                0.378 |             0.369 |             0.389 |                 0.365 |              0.890 |                 0.359 | single pool zarrs 0.2.3 fallbacks 0 |            0.338 |         0.335 |         0.339 |             0.324 |          0.810 |             0.259 | (64, 8) zarrs 0.2.3 fallbacks 0 |                     0.889 |                          1.119 |
+| chunks c=8    | benchmark_compress_shard.zarr |                0.342 |             0.335 |             0.350 |                 0.331 |              0.810 |                 0.499 | single pool zarrs 0.2.3 fallbacks 0 |            0.332 |         0.324 |         0.338 |             0.321 |          0.780 |             0.414 | (64, 8) zarrs 0.2.3 fallbacks 0 |                     0.968 |                          1.028 |
+| subchunks c=1 | benchmark_compress_shard.zarr |                2.515 |             2.492 |             2.538 |                 2.449 |              2.920 |                 0.059 | single pool zarrs 0.2.3 fallbacks 0 |            2.360 |         2.340 |         2.446 |             2.334 |          2.870 |             0.059 | (64, 8) zarrs 0.2.3 fallbacks 0 |                     0.953 |                          1.065 |
+| subchunks c=2 | benchmark_compress_shard.zarr |                1.117 |             1.100 |             1.143 |                 1.083 |              1.650 |                 0.067 | single pool zarrs 0.2.3 fallbacks 0 |            1.088 |         1.061 |         1.119 |             1.046 |          1.590 |             0.068 | (64, 8) zarrs 0.2.3 fallbacks 0 |                     0.966 |                          1.027 |
+| subchunks c=4 | benchmark_compress_shard.zarr |                0.875 |             0.842 |             0.943 |                 0.806 |              1.390 |                 0.072 | single pool zarrs 0.2.3 fallbacks 0 |            0.655 |         0.644 |         0.689 |             0.633 |          1.100 |             0.071 | (64, 8) zarrs 0.2.3 fallbacks 0 |                     0.786 |                          1.336 |
+| subchunks c=8 | benchmark_compress_shard.zarr |                0.763 |             0.755 |             0.797 |                 0.732 |              1.290 |                 0.079 | single pool zarrs 0.2.3 fallbacks 0 |            0.436 |         0.429 |         0.450 |             0.424 |          1.030 |             0.077 | (64, 8) zarrs 0.2.3 fallbacks 0 |                     0.580 |                          1.752 |
+| roundtrip     | benchmark.zarr                |                3.948 |             3.564 |             4.236 |                 2.961 |              3.590 |                 2.426 | single pool zarrs 0.2.3             |            3.763 |         3.496 |         4.336 |             3.277 |          3.910 |             2.429 | (64, 8) zarrs 0.2.3             |                     1.107 |                          1.049 |
+| roundtrip     | benchmark_compress.zarr       |                0.576 |             0.564 |             0.590 |                 0.553 |              1.010 |                 2.449 | single pool zarrs 0.2.3             |            0.586 |         0.570 |         0.614 |             0.558 |          1.060 |             2.452 | (64, 8) zarrs 0.2.3             |                     1.008 |                          0.983 |
+| roundtrip     | benchmark_compress_shard.zarr |                1.713 |             1.648 |             1.750 |                 1.542 |              2.170 |                 2.323 | single pool zarrs 0.2.3             |            1.717 |         1.618 |         1.797 |             1.563 |          2.170 |             2.412 | (64, 8) zarrs 0.2.3             |                     1.014 |                          0.998 |
