@@ -5,6 +5,7 @@ import timeit
 import asyncio
 import click
 from functools import wraps
+import os
 import sys
 
 import zarr
@@ -25,6 +26,10 @@ zarr.config.set({
         "chunk_concurrent_maximum": None,
     }
 })
+# Two-stage builds size their read and decode pools from these; other builds ignore them.
+for key, var in (("read_workers", "ZARRS_READ_WORKERS"), ("decode_workers", "ZARRS_DECODE_WORKERS")):
+    if os.environ.get(var):
+        zarr.config.set({f"codec_pipeline.{key}": int(os.environ[var])})
 
 
 def coro(f):
@@ -50,6 +55,15 @@ async def main(path, concurrent_chunks, subchunks, read_all):
         store = LocalStore(path, read_only=True)
 
     dataset = zarr.open(store=store, mode='r')
+    # Count reads handed to zarr-python's own pipeline: a fallback is not a zarrs number.
+    fallbacks = [0]
+    pipeline = dataset._async_array.codec_pipeline
+    if getattr(pipeline, "python_impl", None) is not None:
+        python_read = pipeline.python_impl.read
+        async def counted(*a, **k):
+            fallbacks[0] += 1
+            return await python_read(*a, **k)
+        object.__setattr__(pipeline.python_impl, "read", counted)
 
     domain_shape = dataset.shape
     if subchunks:
@@ -90,6 +104,9 @@ async def main(path, concurrent_chunks, subchunks, read_all):
     elapsed = timeit.default_timer() - start_time
     elapsed_ms = elapsed * 1000.0
     print(f"Decoded in {elapsed_ms:.2f}ms")
+    # What was built, not what was asked for: pools are sized by the first read.
+    pool_sizes = getattr(getattr(zarrs, "_internal", None), "pool_sizes", None)
+    print(f"pools: {pool_sizes() if pool_sizes else 'single pool'} zarrs {zarrs.__version__} fallbacks {fallbacks[0]}")
 
 if __name__ == "__main__":
     asyncio.run(main())

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import os
 import timeit
 import click
 
@@ -19,6 +20,10 @@ zarr.config.set({
         "chunk_concurrent_maximum": None,
     }
 })
+# Two-stage builds size their read and decode pools from these; other builds ignore them.
+for key, var in (("read_workers", "ZARRS_READ_WORKERS"), ("decode_workers", "ZARRS_DECODE_WORKERS")):
+    if os.environ.get(var):
+        zarr.config.set({f"codec_pipeline.{key}": int(os.environ[var])})
 
 @click.command()
 @click.argument('path', type=str)
@@ -40,6 +45,8 @@ def main(path, output):
     elapsed_ms = elapsed * 1000.0
 
     print(f"Round trip in {elapsed_ms:.2f}ms")
+    pool_sizes = getattr(getattr(zarrs, "_internal", None), "pool_sizes", None)
+    print(f"pools: {pool_sizes() if pool_sizes else 'single pool'} zarrs {zarrs.__version__}")
 
 if __name__ == "__main__":
     main()
