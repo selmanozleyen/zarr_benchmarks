@@ -30,5 +30,6 @@ run_benchmark_read_all = "zarr_benchmarks.run_benchmark_read_all:main"
 run_benchmark_read_chunks = "zarr_benchmarks.run_benchmark_read_chunks:main"
 run_benchmark_read_subchunks = "zarr_benchmarks.run_benchmark_read_subchunks:main"
 run_benchmark_roundtrip = "zarr_benchmarks.run_benchmark_roundtrip:main"
+run_benchmark_read_random = "zarr_benchmarks.run_benchmark_read_random:main"
 plot_benchmarks = "zarr_benchmarks.plot_benchmarks:main"
 

@@ -15,13 +15,25 @@ def coro(f):
 
     return wrapper
 
+def axis0_indices(extent, random, unsorted, strided):
+    """Indices along axis 0 for a random-access read, drawn afresh on every run."""
+    rng = np.random.default_rng()
+    if strided:
+        return np.arange(rng.integers(strided), extent, strided)
+    indices = rng.choice(extent, min(random, extent), replace=False)
+    return indices if unsorted else np.sort(indices)
+
+
 @click.command()
 @coro
 @click.argument('path', type=str)
 @click.option('--concurrent_chunks', type=int, default=None, help='Number of concurrent async chunk reads. Ignored if --read-all is set')
 @click.option('--subchunks', is_flag=True, show_default=True, default=False, help='Reader inner-chunk-by-inner-chunk. Ignored if --read-all is set')
 @click.option('--read_all', is_flag=True, show_default=True, default=False, help='Read the entire array in one operation.')
-async def main(path, concurrent_chunks, subchunks, read_all):
+@click.option('--random', 'random_k', type=int, default=None, help='Read this many random indices along axis 0 (sorted unless --unsorted).')
+@click.option('--unsorted', is_flag=True, show_default=True, default=False, help='With --random, keep the indices in random order.')
+@click.option('--strided', type=int, default=None, help='Read every STRIDED-th index along axis 0, from a random offset.')
+async def main(path, concurrent_chunks, subchunks, read_all, random_k, unsorted, strided):
     if path.startswith("http"):
         kvstore = {
             'driver': 'http',
@@ -63,8 +75,15 @@ async def main(path, concurrent_chunks, subchunks, read_all):
         return await dataset[ts.IndexDomain(chunk_slice)].read()
         # print("Read", chunk_index)
 
+    indices = None
+    if random_k or strided:
+        indices = axis0_indices(domain_shape[0], random_k, unsorted, strided)
+        print("Indices", len(indices), "of", domain_shape[0])
+
     start_time = timeit.default_timer()
-    if read_all:
+    if indices is not None:
+        print((await dataset[indices].read()).shape)
+    elif read_all:
         print(dataset.read().result().shape)
     elif concurrent_chunks is None:
         async with asyncio.TaskGroup() as tg:

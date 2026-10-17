@@ -35,6 +35,13 @@ IMAGES = [
     "data/benchmark_compress_shard.zarr",
 ]
 CONCURRENCY = [1, 2, 4, 8]
+ROWS = "data/benchmark_rows_shard.zarr"
+# Random access along axis 0: (label, flags) for the 3-D images, and for the 2-D rows image.
+RANDOM_3D = [("random 64", ["--random", "64"]), ("unsorted 64", ["--random", "64", "--unsorted"]),
+             ("strided 16", ["--strided", "16"])]
+RANDOM_ROWS = [("random 8192", ["--random", "8192"]),
+               ("unsorted 8192", ["--random", "8192", "--unsorted"]),
+               ("strided 128", ["--strided", "128"])]
 
 
 def parse_arms(spec: str) -> list[tuple[str, str, dict[str, str]]]:
@@ -56,7 +63,11 @@ def cases() -> list[tuple[str, str, list[str]]]:
     for c in CONCURRENCY:
         out.append((f"subchunks c={c}", IMAGES[2], ["--subchunks", "--concurrent_chunks", str(c)]))
     out += [("roundtrip", image, []) for image in IMAGES]
-    return out
+    out += [(label, image, flags) for image in IMAGES for label, flags in RANDOM_3D]
+    out += [(label, ROWS, flags) for label, flags in RANDOM_ROWS]
+    # CASES=random,unsorted keeps the cases whose label starts with one of these.
+    keep = [c for c in os.environ.get("CASES", "").split(",") if c]
+    return [c for c in out if not keep or c[0].split()[0] in keep]
 
 
 def run_once(python: str, env: dict[str, str], label: str, flags: list[str], image: str) -> dict:

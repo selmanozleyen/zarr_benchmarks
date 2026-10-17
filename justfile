@@ -8,6 +8,7 @@ generate_data:
 	./generate_benchmark_array.rs data/benchmark.zarr
 	./generate_benchmark_array.rs --compress data/benchmark_compress.zarr
 	./generate_benchmark_array.rs --compress --subchunk-shape 64,64,64 data/benchmark_compress_shard.zarr
+	uv run python generate_benchmark_rows.py data/benchmark_rows_shard.zarr
 
 benchmark_read_all:
 	uv run run_benchmark_read_all
@@ -21,7 +22,10 @@ benchmark_read_subchunks:
 benchmark_roundtrip:
 	uv run run_benchmark_roundtrip
 
+benchmark_read_random:
+	uv run run_benchmark_read_random
+
 plot:
 	uv run plot_benchmarks
 
-benchmark_all: benchmark_read_all benchmark_read_chunks benchmark_read_subchunks benchmark_roundtrip
+benchmark_all: benchmark_read_all benchmark_read_chunks benchmark_read_subchunks benchmark_roundtrip benchmark_read_random

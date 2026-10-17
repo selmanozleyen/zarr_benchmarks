@@ -97,6 +97,14 @@ A subchunk is an inner chunk within a sharded chunk.
 
 ![read chunks benchmark image](./plots/benchmark_read_subchunks.svg)
 
+## Read Random Benchmark
+This benchmark measures the minimum time and peak memory usage to read a set of indices along axis 0 in one call, the access of a data loader drawing samples: 64 slabs of each 3-D dataset, and 8192 rows of a 2-D, row-major dataset (`benchmark_rows_shard.zarr`: 1,048,576 x 512 `uint16`, `zstd` 0, 64-row inner chunks in 4096-row shards, from `generate_benchmark_rows.py`).
+ - Patterns: sorted random indices, the same unsorted, and every Nth index from a random offset
+ - Indices are drawn afresh on every run; the disk cache is cleared between each measurement
+ - These are best of 5 measurements
+
+[Table of raw measurements (benchmark_read_random.md)](./measurements/benchmark_read_random.md)
+
 ## Read All Benchmark
 This benchmark measures the minimum time and peak memory usage to read an entire dataset into memory.
  - The disk cache is cleared between each measurement
