@@ -10,7 +10,9 @@ An optional `:READ:DECODE[:READ_AHEAD_BYTES]` suffix sets `codec_pipeline.read_w
 `codec_pipeline.decode_workers` and `codec_pipeline.read_ahead_bytes` for that arm (empty fields
 keep the default); a build without those settings ignores them.
 Repetitions are interleaved across arms (arm order shuffled per repetition) so a drifting
-machine hits every arm alike. Best of BEST_OF, as in the other benchmarks.
+machine hits every arm alike. BEST_OF repetitions per arm; each case reports the best (as the
+other benchmarks do) and the median with its 20th-80th percentile spread, since on a noisy
+machine the best of a few runs is decided by one lucky run.
 """
 
 import math
@@ -93,13 +95,20 @@ def main():
                 got[name].append(r)
         row = {"case": label, "image": os.path.basename(image)}
         for name in names:
-            row[f"{name} decoded (s)"] = np.nanmin([r["decoded"] for r in got[name]])
+            decoded = [r["decoded"] for r in got[name]]
+            row[f"{name} median (s)"] = np.nanmedian(decoded)
+            row[f"{name} p20 (s)"] = np.nanpercentile(decoded, 20)
+            row[f"{name} p80 (s)"] = np.nanpercentile(decoded, 80)
+            row[f"{name} decoded (s)"] = np.nanmin(decoded)
             row[f"{name} wall (s)"] = np.nanmin([r["wall"] for r in got[name]])
             row[f"{name} memory (GB)"] = np.nanmin([r["rss"] for r in got[name]])
             row[f"{name} pools"] = got[name][-1]["pools"]
         base = row[f"{names[0]} decoded (s)"]
         for name in names[1:]:
             row[f"{name} time / {names[0]} time"] = row[f"{name} decoded (s)"] / base
+            row[f"{names[0]} / {name} median speedup"] = (
+                row[f"{names[0]} median (s)"] / row[f"{name} median (s)"]
+            )
         rows.append(row)
         print(pd.DataFrame([row]).to_string(index=False), flush=True)
 
