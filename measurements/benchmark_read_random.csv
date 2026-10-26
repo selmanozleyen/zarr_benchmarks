@@ -1,0 +1,13 @@
+Image,Pattern,Time (s)<br>tensorstore<br>python,<br>zarr<br>python,<br>zarrs<br>python,Memory (GB)<br>tensorstore<br>python,<br>zarr<br>python,<br>zarrs<br>python
+data/benchmark.zarr,random 64,1.4,1.33,1.33,0.449936,0.522016,0.73768
+data/benchmark.zarr,unsorted 64,1.24,1.25,1.33,0.482528,0.52056,0.737984
+data/benchmark.zarr,strided 16,1.22,1.17,1.43,0.482512,0.518176,0.737984
+data/benchmark_compress.zarr,random 64,0.62,0.72,0.73,0.440448,0.550768,0.755584
+data/benchmark_compress.zarr,unsorted 64,0.62,0.69,0.75,0.523696,0.552368,0.754448
+data/benchmark_compress.zarr,strided 16,0.65,0.69,0.61,0.521808,0.548048,0.756416
+data/benchmark_compress_shard.zarr,random 64,0.71,1.04,0.7,0.293424,0.442256,0.291136
+data/benchmark_compress_shard.zarr,unsorted 64,0.69,0.99,0.84,0.336592,0.433872,0.289072
+data/benchmark_compress_shard.zarr,strided 16,0.66,1.02,0.85,0.32696,0.434528,0.277328
+data/benchmark_rows_shard.zarr,random 8192,0.54,1.12,0.86,0.089424,0.128048,0.084688
+data/benchmark_rows_shard.zarr,unsorted 8192,0.65,0.96,0.63,0.089136,0.124608,0.093056
+data/benchmark_rows_shard.zarr,strided 128,0.68,1.03,0.86,0.09136,0.118416,0.08536
