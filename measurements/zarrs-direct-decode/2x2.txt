@@ -1,0 +1,2 @@
+random64_compressed      main_old   100.7 (99-103) 1.00x  main_b2b   100.3 (99-104) 1.00x  box_old   143.8 (143-145) 0.70x  box_b2b    97.1 (96-104) 1.04x
+random64_sharded         main_old   447.4 (445-506) 1.00x  main_b2b   451.1 (447-453) 0.99x  box_old   268.3 (267-282) 1.67x  box_b2b   272.2 (267-288) 1.64x

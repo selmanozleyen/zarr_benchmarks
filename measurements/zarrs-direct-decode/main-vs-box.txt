@@ -1,0 +1,7 @@
+random64_compressed      main med    97.8 ms (97-99)  box med    96.2 ms (95-98)  speedup main/box median 1.02x  best 1.02x
+unsorted64_compressed    main med    98.1 ms (98-100)  box med   101.3 ms (99-102)  speedup main/box median 0.97x  best 1.00x
+strided16_compressed     main med    97.3 ms (95-99)  box med    97.8 ms (96-99)  speedup main/box median 0.99x  best 0.98x
+random64_sharded         main med   447.1 ms (447-478)  box med   278.8 ms (272-289)  speedup main/box median 1.60x  best 1.71x
+random8192_rows          main med   537.7 ms (534-547)  box med   261.4 ms (256-267)  speedup main/box median 2.06x  best 2.13x
+read_all_compressed      main med   219.7 ms (213-220)  box med   215.2 ms (214-218)  speedup main/box median 1.02x  best 1.03x
+chunks_c4_compressed     main med    94.1 ms (92-96)  box med    96.9 ms (94-99)  speedup main/box median 0.97x  best 0.98x
